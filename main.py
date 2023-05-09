@@ -2,6 +2,8 @@ import logging
 import os
 import pandas as pd
 import numpy as np
+import seaborn as sns
+import sqlalchemy as db
 
 
 def get_data_file_content(file_name):
@@ -29,11 +31,9 @@ def main():
 
     print("Panadas-Dataframe:")
 
-    testData = pd.read_csv("./Data/test.csv")
-    print(testData)
-    print(testData.describe())
-
-    
+    test_data = pd.read_csv("./Data/test.csv")
+    print(test_data)
+    print(test_data.describe())
 
     logging.info("Finished script")
 
