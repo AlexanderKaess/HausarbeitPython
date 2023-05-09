@@ -25,7 +25,15 @@ def main():
                         format="%(asctime)s - %(levelname)s - %(message)s")
     logging.info("Starting script for record comparison and validation")
 
-    print(get_data_file_content("./Data/test.csv"))
+    #print(get_data_file_content("./Data/test.csv"))
+
+    print("Panadas-Dataframe:")
+
+    testData = pd.read_csv("./Data/test.csv")
+    print(testData)
+    print(testData.describe())
+
+    
 
     logging.info("Finished script")
 
