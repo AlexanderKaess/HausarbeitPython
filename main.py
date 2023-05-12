@@ -43,8 +43,9 @@ def main():
     test_data = pd.read_csv("./Data/test.csv")
     print(test_data)
 
-
-
+    testlog = log("LogDemo")
+    testlog.debug("Debug Log")
+    testlog.info("Info Log")
 
     logging.info("Finished script")
 
