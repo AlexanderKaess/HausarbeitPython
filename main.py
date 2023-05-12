@@ -1,4 +1,5 @@
 import logging
+from log4python.Log4python import log
 import os
 import pandas as pd
 import numpy as np
@@ -31,9 +32,20 @@ def main():
 
     print("Panadas-Dataframe:")
 
+    print("training table:")
+    train_data = pd.read_csv("./Data/train.csv")
+    print(train_data)
+
+    print("ideal table:")
+    ideal_data = pd.read_csv("./Data/ideal.csv")
+    print(ideal_data)
+
+    print("test table:")
     test_data = pd.read_csv("./Data/test.csv")
     print(test_data)
-    print(test_data.describe())
+
+
+
 
     logging.info("Finished script")
 
