@@ -51,6 +51,7 @@ def main():
 
     database = Database()
     database.create_connection('hausarbeit')
+    database.create_table("modul")
 
     logger.info("### Finished script ###")
 

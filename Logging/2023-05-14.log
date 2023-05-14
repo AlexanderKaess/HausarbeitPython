@@ -5,3 +5,39 @@
 2023-05-14 16:37:26,212 - database - INFO - Databank connection object created
 2023-05-14 16:37:26,212 - database - INFO - Meta data object created
 2023-05-14 16:37:26,212 - main - INFO - ### Finished script ###
+2023-05-14 16:46:25,156 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-14 16:46:25,219 - database - INFO - Database created object
+2023-05-14 16:46:25,219 - database - INFO - Connection string created
+2023-05-14 16:46:25,242 - database - INFO - Engine object created
+2023-05-14 16:46:25,248 - database - INFO - Databank connection object created
+2023-05-14 16:46:25,248 - database - INFO - Meta data object created
+2023-05-14 16:46:25,248 - main - INFO - ### Finished script ###
+2023-05-14 16:48:33,826 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-14 16:48:33,885 - database - INFO - Database created object
+2023-05-14 16:48:33,885 - database - INFO - Connection string created
+2023-05-14 16:48:33,906 - database - INFO - Engine object created
+2023-05-14 16:48:33,913 - database - INFO - Databank connection object created
+2023-05-14 16:48:33,913 - database - INFO - Meta data object created
+2023-05-14 16:49:53,076 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-14 16:49:53,163 - database - INFO - Database created object
+2023-05-14 16:49:53,163 - database - INFO - Connection string created
+2023-05-14 16:49:53,194 - database - INFO - Engine object created
+2023-05-14 16:49:53,202 - database - INFO - Databank connection object created
+2023-05-14 16:49:53,202 - database - INFO - Meta data object created
+2023-05-14 16:49:53,242 - main - INFO - ### Finished script ###
+2023-05-14 16:50:43,204 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-14 16:50:43,291 - database - INFO - Database created object
+2023-05-14 16:50:43,291 - database - INFO - Connection string created
+2023-05-14 16:50:43,322 - database - INFO - Engine object created
+2023-05-14 16:50:43,329 - database - INFO - Databank connection object created
+2023-05-14 16:50:43,329 - database - INFO - Meta data object created
+2023-05-14 16:50:43,330 - database - INFO - Create table: modul
+2023-05-14 16:50:43,333 - main - INFO - ### Finished script ###
+2023-05-14 16:51:15,302 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-14 16:51:15,361 - database - INFO - Database created object
+2023-05-14 16:51:15,361 - database - INFO - Connection string created
+2023-05-14 16:51:15,381 - database - INFO - Engine object created
+2023-05-14 16:51:15,387 - database - INFO - Databank connection object created
+2023-05-14 16:51:15,387 - database - INFO - Meta data object created
+2023-05-14 16:51:15,387 - database - INFO - Create table: modul
+2023-05-14 16:51:15,390 - main - INFO - ### Finished script ###

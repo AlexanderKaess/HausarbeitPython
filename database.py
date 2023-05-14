@@ -20,13 +20,23 @@ class Database:
         logger.info("Connection string created")
 
         # create engine-object
-        engine = db.create_engine(self.connection_string)
+        self.engine = db.create_engine(self.connection_string)
         logger.info("Engine object created")
 
         # create databank connection object
-        connection = engine.connect()
+        connection = self.engine.connect()
         logger.info("Databank connection object created")
 
         # create meta data object
         self.meta_data = db.MetaData()
         logger.info("Meta data object created")
+
+    def create_table(self, table_name):
+        logger.info("Create table: " + table_name)
+        table = db.Table(
+            table_name,
+            self.meta_data,
+            db.Column("id",db.Integer,primary_key=True,autoincrement=True,nullable=False),
+            db.Column("name",db.String(50),nullable=False)
+        )
+        self.meta_data.create_all(self.engine)
