@@ -1,11 +1,9 @@
-import logging
-import log4python
 import os
+import logging
 import pandas as pd
 import numpy as np
-import seaborn as sns
+import seaborn as sb
 
-import log4p
 from database import Database
 
 
@@ -45,10 +43,6 @@ def main():
     print("test table:")
     test_data = pd.read_csv("./Data/test.csv")
     print(test_data)
-
-    # = log4p.config.
-    #testlog.debug("Debug Log")
-    #testlog.info("Info Log")
 
     database = Database()
     database.create_connection('hausarbeit')
