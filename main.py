@@ -1,9 +1,12 @@
 import logging
-from log4python.Log4python import log
+import log4python
 import os
 import pandas as pd
 import numpy as np
 import seaborn as sns
+
+import log4p
+from database import Database
 
 
 def get_data_file_content(file_name):
@@ -43,9 +46,12 @@ def main():
     test_data = pd.read_csv("./Data/test.csv")
     print(test_data)
 
-    testlog = log("LogDemo")
-    testlog.debug("Debug Log")
-    testlog.info("Info Log")
+    # = log4p.config.
+    #testlog.debug("Debug Log")
+    #testlog.info("Info Log")
+
+    database = Database()
+    database.create_connection('hausarbeit')
 
     logging.info("Finished script")
 
