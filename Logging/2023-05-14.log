@@ -1,0 +1,7 @@
+2023-05-14 16:37:26,114 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-14 16:37:26,183 - database - INFO - Database created object
+2023-05-14 16:37:26,183 - database - INFO - Connection string created
+2023-05-14 16:37:26,205 - database - INFO - Engine object created
+2023-05-14 16:37:26,212 - database - INFO - Databank connection object created
+2023-05-14 16:37:26,212 - database - INFO - Meta data object created
+2023-05-14 16:37:26,212 - main - INFO - ### Finished script ###

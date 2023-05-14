@@ -3,9 +3,9 @@ import logging
 import pandas as pd
 import numpy as np
 import seaborn as sb
+import datetime as dt
 
 from database import Database
-
 
 def get_data_file_content(file_name):
     """
@@ -22,13 +22,18 @@ def get_data_file_content(file_name):
 
 
 def main():
-    logging.basicConfig(level=logging.INFO,
-                        filename="./Logging/info.log",
-                        filemode="w",
-                        format="%(asctime)s - %(levelname)s - %(message)s")
-    logging.info("Starting script for record comparison and validation")
+    today = dt.datetime.today()
+    log_file_name = f"{today.year:02d}-{today.month:02d}-{today.day:02d}.log"
 
-    #print(get_data_file_content("./Data/test.csv"))
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger("HAUSARBEIT")
+    file_handler = logging.FileHandler("./Logging/" + log_file_name)
+    file_handler.setLevel(logging.INFO)
+    formatter = logging.Formatter("%(asctime)s - %(module)s - %(levelname)s - %(message)s")
+    file_handler.setFormatter(formatter)
+
+    logger.addHandler(file_handler)
+    logger.info("### Starting script for record comparison and validation ###")
 
     print("Panadas-Dataframe:")
 
@@ -47,7 +52,7 @@ def main():
     database = Database()
     database.create_connection('hausarbeit')
 
-    logging.info("Finished script")
+    logger.info("### Finished script ###")
 
 
 if __name__ == "__main__":
