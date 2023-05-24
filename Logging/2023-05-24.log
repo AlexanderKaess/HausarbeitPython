@@ -1,0 +1,36 @@
+2023-05-24 07:17:50,016 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-24 07:17:50,017 - main - INFO - Create training table
+2023-05-24 07:17:50,020 - main - INFO - Create ideal table
+2023-05-24 07:17:50,025 - main - INFO - Create test table
+2023-05-24 07:17:50,025 - database - INFO - Database created object
+2023-05-24 07:17:50,026 - database - INFO - Connection string created
+2023-05-24 07:17:50,047 - database - INFO - Engine object created
+2023-05-24 07:17:50,054 - database - INFO - Databank connection object created
+2023-05-24 07:17:50,054 - database - INFO - Meta data object created
+2023-05-24 07:17:50,054 - database - INFO - Create table from dataframe: train_data
+2023-05-24 07:17:50,099 - database - INFO - Create table from dataframe: ideal_data
+2023-05-24 07:17:50,192 - main - INFO - ### Finished script ###
+2023-05-24 07:19:46,918 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-24 07:19:46,919 - main - INFO - Create training table
+2023-05-24 07:19:46,921 - main - INFO - Create ideal table
+2023-05-24 07:19:46,926 - main - INFO - Create test table
+2023-05-24 07:19:46,927 - database - INFO - Database created object
+2023-05-24 07:19:46,927 - database - INFO - Connection string created
+2023-05-24 07:19:46,947 - database - INFO - Engine object created
+2023-05-24 07:19:46,954 - database - INFO - Databank connection object created
+2023-05-24 07:19:46,955 - database - INFO - Meta data object created
+2023-05-24 07:19:46,955 - database - INFO - Create table from dataframe: train_data
+2023-05-24 07:19:46,997 - database - INFO - Create table from dataframe: ideal_data
+2023-05-24 07:19:47,106 - main - INFO - ### Finished script ###
+2023-05-24 07:22:13,915 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-24 07:22:13,916 - main - INFO - Create training table
+2023-05-24 07:22:13,918 - main - INFO - Create ideal table
+2023-05-24 07:22:13,923 - main - INFO - Create test table
+2023-05-24 07:22:13,924 - database - INFO - Database created object
+2023-05-24 07:22:13,924 - database - INFO - Connection string created
+2023-05-24 07:22:13,946 - database - INFO - Engine object created
+2023-05-24 07:22:13,952 - database - INFO - Databank connection object created
+2023-05-24 07:22:13,953 - database - INFO - Meta data object created
+2023-05-24 07:22:13,953 - database - INFO - Create table from dataframe: train_data
+2023-05-24 07:22:13,997 - database - INFO - Create table from dataframe: ideal_data
+2023-05-24 07:22:14,095 - main - INFO - ### Finished script ###

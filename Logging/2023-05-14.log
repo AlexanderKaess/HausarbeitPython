@@ -41,3 +41,11 @@
 2023-05-14 16:51:15,387 - database - INFO - Meta data object created
 2023-05-14 16:51:15,387 - database - INFO - Create table: modul
 2023-05-14 16:51:15,390 - main - INFO - ### Finished script ###
+2023-05-14 16:53:11,654 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-14 16:53:11,730 - database - INFO - Database created object
+2023-05-14 16:53:11,730 - database - INFO - Connection string created
+2023-05-14 16:53:11,759 - database - INFO - Engine object created
+2023-05-14 16:53:11,766 - database - INFO - Databank connection object created
+2023-05-14 16:53:11,766 - database - INFO - Meta data object created
+2023-05-14 16:53:11,767 - database - INFO - Create table: modul
+2023-05-14 16:53:11,770 - main - INFO - ### Finished script ###

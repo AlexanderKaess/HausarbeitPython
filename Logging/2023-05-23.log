@@ -1,0 +1,139 @@
+2023-05-23 07:03:37,751 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:03:37,841 - database - INFO - Database created object
+2023-05-23 07:03:37,841 - database - INFO - Connection string created
+2023-05-23 07:03:37,879 - database - INFO - Engine object created
+2023-05-23 07:03:37,957 - database - INFO - Databank connection object created
+2023-05-23 07:03:37,957 - database - INFO - Meta data object created
+2023-05-23 07:03:37,957 - database - INFO - Create table: modul
+2023-05-23 07:03:37,994 - main - INFO - ### Finished script ###
+2023-05-23 07:14:14,746 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:14:14,807 - database - INFO - Database created object
+2023-05-23 07:14:14,807 - database - INFO - Connection string created
+2023-05-23 07:14:14,827 - database - INFO - Engine object created
+2023-05-23 07:14:14,834 - database - INFO - Databank connection object created
+2023-05-23 07:14:14,834 - database - INFO - Meta data object created
+2023-05-23 07:14:14,834 - database - INFO - Create table: modul
+2023-05-23 07:14:14,837 - main - INFO - ### Finished script ###
+2023-05-23 07:32:44,273 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:32:44,333 - database - INFO - Database created object
+2023-05-23 07:32:44,333 - database - INFO - Connection string created
+2023-05-23 07:32:44,352 - database - INFO - Engine object created
+2023-05-23 07:32:44,359 - database - INFO - Databank connection object created
+2023-05-23 07:32:44,359 - database - INFO - Meta data object created
+2023-05-23 07:32:44,359 - database - INFO - Create table: modul
+2023-05-23 07:32:44,362 - database - INFO - Database created object
+2023-05-23 07:32:44,362 - database - INFO - Connection string created
+2023-05-23 07:32:44,362 - database - INFO - Engine object created
+2023-05-23 07:34:13,633 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:34:13,695 - database - INFO - Database created object
+2023-05-23 07:34:13,695 - database - INFO - Connection string created
+2023-05-23 07:34:13,715 - database - INFO - Engine object created
+2023-05-23 07:34:13,721 - database - INFO - Databank connection object created
+2023-05-23 07:34:13,721 - database - INFO - Meta data object created
+2023-05-23 07:34:13,721 - database - INFO - Create table: modul
+2023-05-23 07:34:13,725 - database - INFO - Database created object
+2023-05-23 07:34:13,725 - database - INFO - Connection string created
+2023-05-23 07:34:13,725 - database - INFO - Engine object created
+2023-05-23 07:37:24,860 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:37:24,919 - database - INFO - Database created object
+2023-05-23 07:37:24,919 - database - INFO - Connection string created
+2023-05-23 07:37:24,939 - database - INFO - Engine object created
+2023-05-23 07:37:24,945 - database - INFO - Databank connection object created
+2023-05-23 07:37:24,945 - database - INFO - Meta data object created
+2023-05-23 07:37:24,946 - database - INFO - Create table: modul
+2023-05-23 07:37:24,948 - main - INFO - ### Finished script ###
+2023-05-23 07:37:52,031 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:37:52,091 - database - INFO - Database created object
+2023-05-23 07:37:52,091 - database - INFO - Connection string created
+2023-05-23 07:37:52,111 - database - INFO - Engine object created
+2023-05-23 07:37:52,117 - database - INFO - Databank connection object created
+2023-05-23 07:37:52,117 - database - INFO - Meta data object created
+2023-05-23 07:37:52,118 - database - INFO - Create table: modul
+2023-05-23 07:37:52,120 - main - INFO - ### Finished script ###
+2023-05-23 07:38:50,523 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:38:50,582 - database - INFO - Database created object
+2023-05-23 07:38:50,582 - database - INFO - Connection string created
+2023-05-23 07:38:50,601 - database - INFO - Engine object created
+2023-05-23 07:38:50,608 - database - INFO - Databank connection object created
+2023-05-23 07:38:50,608 - database - INFO - Meta data object created
+2023-05-23 07:38:50,608 - database - INFO - Create table: modul
+2023-05-23 07:38:50,610 - database - INFO - Create table: best_function_1
+2023-05-23 07:38:50,631 - main - INFO - ### Finished script ###
+2023-05-23 07:39:31,158 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:39:31,219 - database - INFO - Database created object
+2023-05-23 07:39:31,219 - database - INFO - Connection string created
+2023-05-23 07:39:31,240 - database - INFO - Engine object created
+2023-05-23 07:39:31,247 - database - INFO - Databank connection object created
+2023-05-23 07:39:31,247 - database - INFO - Meta data object created
+2023-05-23 07:39:31,247 - database - INFO - Create table: modul
+2023-05-23 07:39:31,249 - database - INFO - Create table: best_function_1
+2023-05-23 07:39:31,251 - database - INFO - Create table: best_function_2
+2023-05-23 07:39:31,261 - database - INFO - Create table: best_function_3
+2023-05-23 07:39:31,269 - database - INFO - Create table: best_function_4
+2023-05-23 07:39:31,278 - main - INFO - ### Finished script ###
+2023-05-23 07:54:34,649 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:54:34,709 - database - INFO - Database created object
+2023-05-23 07:54:34,709 - database - INFO - Connection string created
+2023-05-23 07:54:34,730 - database - INFO - Engine object created
+2023-05-23 07:54:34,736 - database - INFO - Databank connection object created
+2023-05-23 07:54:34,736 - database - INFO - Meta data object created
+2023-05-23 07:54:34,737 - database - INFO - Create table: best_function_1
+2023-05-23 07:54:34,740 - database - INFO - Create table: best_function_2
+2023-05-23 07:54:34,742 - database - INFO - Create table: best_function_3
+2023-05-23 07:54:34,745 - database - INFO - Create table: best_function_4
+2023-05-23 07:54:34,748 - main - INFO - ### Finished script ###
+2023-05-23 07:55:41,722 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:55:41,780 - database - INFO - Database created object
+2023-05-23 07:55:41,780 - database - INFO - Connection string created
+2023-05-23 07:55:41,799 - database - INFO - Engine object created
+2023-05-23 07:55:41,806 - database - INFO - Databank connection object created
+2023-05-23 07:55:41,806 - database - INFO - Meta data object created
+2023-05-23 07:55:41,806 - database - INFO - Create table: best_function_1
+2023-05-23 07:55:41,809 - database - INFO - Create table: best_function_2
+2023-05-23 07:55:41,811 - database - INFO - Create table: best_function_3
+2023-05-23 07:55:41,813 - database - INFO - Create table: best_function_4
+2023-05-23 07:55:41,816 - main - INFO - ### Finished script ###
+2023-05-23 07:57:19,213 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 07:57:19,274 - database - INFO - Database created object
+2023-05-23 07:57:19,274 - database - INFO - Connection string created
+2023-05-23 07:57:19,293 - database - INFO - Engine object created
+2023-05-23 07:57:19,299 - database - INFO - Databank connection object created
+2023-05-23 07:57:19,300 - database - INFO - Meta data object created
+2023-05-23 07:57:19,300 - database - INFO - Create table: best_function_1
+2023-05-23 07:57:19,307 - database - INFO - Create table: best_function_2
+2023-05-23 07:57:19,315 - database - INFO - Create table: best_function_3
+2023-05-23 07:57:19,323 - database - INFO - Create table: best_function_4
+2023-05-23 07:57:19,330 - main - INFO - ### Finished script ###
+2023-05-23 08:01:18,875 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 08:01:18,935 - database - INFO - Database created object
+2023-05-23 08:01:18,935 - database - INFO - Connection string created
+2023-05-23 08:01:18,955 - database - INFO - Engine object created
+2023-05-23 08:01:18,961 - database - INFO - Databank connection object created
+2023-05-23 08:01:18,961 - database - INFO - Meta data object created
+2023-05-23 08:01:18,961 - database - INFO - Create table: best_function_1
+2023-05-23 08:01:18,964 - database - INFO - Create table: best_function_2
+2023-05-23 08:01:18,966 - database - INFO - Create table: best_function_3
+2023-05-23 08:01:18,969 - database - INFO - Create table: best_function_4
+2023-05-23 08:01:18,972 - main - INFO - ### Finished script ###
+2023-05-23 08:02:53,724 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 08:02:53,787 - database - INFO - Database created object
+2023-05-23 08:02:53,787 - database - INFO - Connection string created
+2023-05-23 08:02:53,806 - database - INFO - Engine object created
+2023-05-23 08:02:53,813 - database - INFO - Databank connection object created
+2023-05-23 08:02:53,813 - database - INFO - Meta data object created
+2023-05-23 08:02:53,813 - database - INFO - Create table: best_function_1
+2023-05-23 08:02:53,820 - database - INFO - Create table: best_function_2
+2023-05-23 08:02:53,826 - database - INFO - Create table: best_function_3
+2023-05-23 08:02:53,835 - database - INFO - Create table: best_function_4
+2023-05-23 08:02:53,842 - main - INFO - ### Finished script ###
+2023-05-23 08:03:55,721 - main - INFO - ### Starting script for record comparison and validation ###
+2023-05-23 08:03:55,788 - database - INFO - Database created object
+2023-05-23 08:03:55,788 - database - INFO - Connection string created
+2023-05-23 08:03:55,808 - database - INFO - Engine object created
+2023-05-23 08:03:55,815 - database - INFO - Databank connection object created
+2023-05-23 08:03:55,815 - database - INFO - Meta data object created
+2023-05-23 08:03:55,815 - database - INFO - Create table: best_function_1
+2023-05-23 08:03:55,817 - database - INFO - Create table: best_function_2
+2023-05-23 08:03:55,820 - database - INFO - Create table: best_function_3
+2023-05-23 08:03:55,824 - database - INFO - Create table: best_function_4
+2023-05-23 08:03:55,830 - main - INFO - ### Finished script ###

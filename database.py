@@ -1,4 +1,5 @@
 import sqlalchemy as db
+import pandas as pd
 import os
 import logging
 
@@ -36,7 +37,21 @@ class Database:
         table = db.Table(
             table_name,
             self.meta_data,
-            db.Column("id",db.Integer,primary_key=True,autoincrement=True,nullable=False),
-            db.Column("name",db.String(50),nullable=False)
+            db.Column("x_test_function", db.Integer, primary_key=True, autoincrement=False, nullable=False),
+            db.Column("y_test_function", db.Integer, nullable=False),
+            db.Column("delta_y", db.Integer, nullable=False),
+            db.Column(table_name, db.Integer, nullable=False)
         )
         self.meta_data.create_all(self.engine)
+
+    def create_table_from_dataframe(self, dataframe_object, table_name):
+        if not isinstance(dataframe_object, pd.DataFrame):
+            logger.error("Object is not a dataframe")
+            return
+
+        logger.info("Create table from dataframe: " + table_name)
+        dataframe_object.to_sql(table_name,
+                                con=self.engine,
+                                schema="hausarbeit",
+                                if_exists="replace",
+                                index=False)
