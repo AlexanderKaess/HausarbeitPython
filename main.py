@@ -1,26 +1,20 @@
-import os
 import logging
+
 import pandas as pd
 import numpy as np
 import seaborn as sb
-import datetime as dt
 
+import centrallogger
 from database import Database
+
+logger = logging.getLogger("HAUSARBEIT")
 
 
 def main():
-    # create logger, has to be moved to own file
-    today = dt.datetime.today()
-    log_file_name = f"{today.year:02d}-{today.month:02d}-{today.day:02d}.log"
-    logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger("HAUSARBEIT")
-    file_handler = logging.FileHandler("./Logging/" + log_file_name)
-    file_handler.setLevel(logging.INFO)
-    formatter = logging.Formatter("%(asctime)s - %(module)s - %(levelname)s - %(message)s")
-    file_handler.setFormatter(formatter)
+    print("### Starting script for data comparison and validation ###")
 
-    logger.addHandler(file_handler)
-    logger.info("### Starting script for record comparison and validation ###")
+    # create central logging object
+    centrallogger.Centrallogger("HAUSARBEIT")
 
     # load .csv files to dataframes
     logger.info("Create training table")
@@ -38,7 +32,7 @@ def main():
     database.create_table_from_dataframe(train_data, "train_data")
     database.create_table_from_dataframe(ideal_data, "ideal_data")
 
-    logger.info("### Finished script ###")
+    print("### Finished script ###")
 
 
 if __name__ == "__main__":

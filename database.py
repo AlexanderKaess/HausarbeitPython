@@ -1,7 +1,9 @@
+import logging
+
 import sqlalchemy as db
 import pandas as pd
 import os
-import logging
+import centrallogger
 
 logger = logging.getLogger("HAUSARBEIT")
 
