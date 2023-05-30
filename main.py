@@ -5,6 +5,7 @@ import numpy as np
 import seaborn as sb
 
 import centrallogger
+import visualization
 from database import Database
 
 logger = logging.getLogger("HAUSARBEIT")
@@ -31,6 +32,11 @@ def main():
     database.create_connection('hausarbeit')
     database.create_table_from_dataframe(train_data, "train_data")
     database.create_table_from_dataframe(ideal_data, "ideal_data")
+
+    train_visualization = visualization.Visualization()
+    train_visualization.create_plot_from_dataframe(train_data)
+    #ideal_visualitzation = visualization.Visualization()
+    #ideal_visualitzation.create_alotplot_from_dataframe(ideal_data)
 
     print("### Finished script ###")
 
