@@ -20,23 +20,26 @@ def main():
     # load .csv files to dataframes
     logger.info("Create training table")
     train_data = pd.read_csv("./Data/train.csv")
+    train_data.name = "train.csv"
 
     logger.info("Create ideal table")
     ideal_data = pd.read_csv("./Data/ideal.csv")
+    ideal_data.name = "ideal.csv"
 
     logger.info("Create test table")
     test_data = pd.read_csv("./Data/test.csv")
+    test_data.name = "test.csv"
 
     # create database and insert dataframes
     database = Database()
     database.create_connection('hausarbeit')
-    database.create_table_from_dataframe(train_data, "train_data")
-    database.create_table_from_dataframe(ideal_data, "ideal_data")
+    database.create_table_from_dataframe(train_data, train_data.name)
+    database.create_table_from_dataframe(ideal_data, ideal_data.name)
 
-    train_visualization = visualization.Visualization()
-    train_visualization.create_plot_from_dataframe(train_data)
-    #ideal_visualitzation = visualization.Visualization()
-    #ideal_visualitzation.create_alotplot_from_dataframe(ideal_data)
+    train_visualization = visualization.Visualization(train_data)
+    train_visualization.create_plot_from_dataframe()
+    ideal_visualization = visualization.Visualization(ideal_data)
+    ideal_visualization.create_plot_from_dataframe()
 
     print("### Finished script ###")
 
