@@ -13,6 +13,10 @@ class Visualization:
         df = self.dataframe
         style.use("ggplot")
 
+        # plt.plot(df.x, df.y1)
+        # alternative: plt.plot(df['x'], )
+        # for y_index in df
+            #plt.plot(df.x, df[y_index]) 
         fig, ax = plt.subplots(figsize=(8,8))
         ax.plot(df)
 
