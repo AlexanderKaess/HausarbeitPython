@@ -19,15 +19,15 @@ def main():
 
     # load .csv files to dataframes
     logger.info("Create training table")
-    train_data = pd.read_csv("./Data/train.csv")
+    train_data = pd.read_csv("./Data/train.csv", index_col=[0])
     train_data.name = "train.csv"
 
     logger.info("Create ideal table")
-    ideal_data = pd.read_csv("./Data/ideal.csv")
+    ideal_data = pd.read_csv("./Data/ideal.csv", index_col=[0])
     ideal_data.name = "ideal.csv"
 
     logger.info("Create test table")
-    test_data = pd.read_csv("./Data/test.csv")
+    test_data = pd.read_csv("./Data/test.csv", index_col=[0])
     test_data.name = "test.csv"
 
     # create database and insert dataframes
