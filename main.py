@@ -35,10 +35,12 @@ def main():
     database.create_connection('hausarbeit')
     database.create_table_from_dataframe(train_data, train_data.name)
     database.create_table_from_dataframe(ideal_data, ideal_data.name)
+    database.create_table_from_dataframe(test_data, test_data.name)
 
-    train_visualization = visualization.Visualization(train_data)
+    # create plots
+    train_visualization = visualization.Visualization(train_data, train_data.name)
     train_visualization.create_plot_from_dataframe()
-    ideal_visualization = visualization.Visualization(ideal_data)
+    ideal_visualization = visualization.Visualization(ideal_data, ideal_data.name)
     ideal_visualization.create_plot_from_dataframe()
 
     print("### Finished script ###")
