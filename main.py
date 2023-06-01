@@ -42,7 +42,6 @@ def main():
     ideal_visualization.create_plot_from_dataframe()
 
     test = least_square_calculation(train_data, ideal_data)
-    print(train_data)
     print(test)
 
     print("### Finished script ###")
