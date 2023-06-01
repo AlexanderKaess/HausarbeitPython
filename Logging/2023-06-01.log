@@ -1,13 +1,13 @@
-2023-06-01 09:10:11,832 - main - INFO - Create training table
-2023-06-01 09:10:11,835 - main - INFO - Create ideal table
-2023-06-01 09:10:11,841 - main - INFO - Create test table
-2023-06-01 09:10:11,842 - database - INFO - Database created object
-2023-06-01 09:10:11,842 - database - INFO - Connection string created
-2023-06-01 09:10:11,860 - database - INFO - Engine object created
-2023-06-01 09:10:11,867 - database - INFO - Databank connection object created
-2023-06-01 09:10:11,867 - database - INFO - Meta data object created
-2023-06-01 09:10:11,867 - database - INFO - Create table from dataframe: train.csv
-2023-06-01 09:10:11,904 - database - INFO - Create table from dataframe: ideal.csv
-2023-06-01 09:10:11,995 - database - INFO - Create table from dataframe: test.csv
-2023-06-01 09:10:12,138 - visualization - INFO - Show plot: train.csv
-2023-06-01 09:10:14,406 - visualization - INFO - Show plot: ideal.csv
+2023-06-01 18:16:26,141 - main - INFO - Create training table
+2023-06-01 18:16:26,143 - main - INFO - Create ideal table
+2023-06-01 18:16:26,149 - main - INFO - Create test table
+2023-06-01 18:16:26,150 - database - INFO - Database created object
+2023-06-01 18:16:26,150 - database - INFO - Connection string created
+2023-06-01 18:16:26,170 - database - INFO - Engine object created
+2023-06-01 18:16:26,178 - database - INFO - Databank connection object created
+2023-06-01 18:16:26,178 - database - INFO - Meta data object created
+2023-06-01 18:16:26,178 - database - INFO - Create table from dataframe: train.csv
+2023-06-01 18:16:26,225 - database - INFO - Create table from dataframe: ideal.csv
+2023-06-01 18:16:26,326 - database - INFO - Create table from dataframe: test.csv
+2023-06-01 18:16:26,483 - visualization - INFO - Show plot: train.csv
+2023-06-01 18:16:29,676 - visualization - INFO - Show plot: ideal.csv
