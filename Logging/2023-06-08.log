@@ -1,0 +1,11 @@
+2023-06-08 14:08:50,157 - main - INFO - Create training table
+2023-06-08 14:08:50,159 - main - INFO - Create ideal table
+2023-06-08 14:08:50,165 - main - INFO - Create test table
+2023-06-08 14:08:50,165 - database - INFO - Database created object
+2023-06-08 14:08:50,166 - database - INFO - Connection string created
+2023-06-08 14:08:50,186 - database - INFO - Engine object created
+2023-06-08 14:08:50,192 - database - INFO - Databank connection object created
+2023-06-08 14:08:50,192 - database - INFO - Meta data object created
+2023-06-08 14:08:50,193 - database - INFO - Create table from dataframe: train.csv
+2023-06-08 14:08:50,230 - database - INFO - Create table from dataframe: ideal.csv
+2023-06-08 14:08:50,352 - database - INFO - Create table from dataframe: test.csv

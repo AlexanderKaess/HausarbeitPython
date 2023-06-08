@@ -42,13 +42,14 @@ def main():
     # ideal_visualization.create_plot_from_dataframe()
 
     test_result = least_square_calculation(train_data, ideal_data)
-    print(test_result)
+    print("testresult: " + str(test_result))
 
     print("### Finished script ###")
 
 
 def least_square_calculation(train_data, ideal_data):
     result = 0.0
+    end_result = 0.0
 
     # get number of rows in train_data
     rows_train_data = len(train_data.index)
@@ -64,34 +65,41 @@ def least_square_calculation(train_data, ideal_data):
     print("columns_ideal_data = " + str(columns_ideal_data))
 
     # 4 columns in train_data
-    for column_train in range(1, columns_train_data, 1):
-        print("train: " + str(column_train))
+    for column_train in range(1, columns_train_data+1, 1):
+        sum_array = 0.0
+        print("### train-function: y" + str(column_train) + " ###")
         # 50 columns in ideal_data
-        for column_ideal in range(1, columns_ideal_data, 1):
-            print("ideal: " + str(column_ideal))
+        # new_column_sum = 100000.0
+        for column_ideal in range(1, columns_ideal_data+1, 1):
+            current_column_sum = 0.0
+            print("--> ideal-function: y" + str(column_ideal))
             # create array from y column values
             train_y_array = np.array(train_data["y" + str(column_train)])
             ideal_y_array = np.array(ideal_data["y" + str(column_ideal)])
 
             # 400 rows to subtract
-            for row in range(1, rows_train_data, 1):
+            for row in range(0, rows_train_data, 1):
                 # calculate least square deviation
-                print(str(row))
                 result = np.square(np.subtract(train_y_array[row], ideal_y_array[row]))
-                print(result)
+                current_column_sum += result
 
-    # numpy.org/doc/
-    # numpy.sqrt(x) = Quadratwurzel der Elemente von array x
-    # numpy.square(x) = Quadrat der Elemente von array x
-    # numpy.minimum(x1, x2) = Minimum der Elemente von array x1 und array x2
-    # numpy.std(x) = Berechnet Standardabweichung von array x
-    # a = np.array([1,2,3,4,5],[6,7,8,9,10])
-    # get a specific element a[1,3] --> 9
-    # get a specific row a[0,:] --> 1,2,3,4,5
-    # get a specific column a[:,2] --> 3,8
+                ### just for testing, afterwards if has to be removed
+                #if row == 3:
+                #    new_column_sum = current_column_sum
+                #    break
+                ###
+
+            print("column_sum = " + str(current_column_sum))
+            sum_array = np.append(sum_array, current_column_sum)
+            index = 0
+            new_sum_array = np.delete(sum_array, index )
+
+        print("sum_array: " + str(new_sum_array))
+        minimal_deviation = np.min(new_sum_array)
+        print("minimum deviation: " + str(minimal_deviation))
 
 
-    return result
+    return end_result
 
 
 if __name__ == "__main__":
