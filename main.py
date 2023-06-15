@@ -48,7 +48,14 @@ def main():
 
 
 def least_square_calculation(train_data, ideal_data):
-    index_array = 0 #np.array()
+    result_dict = {
+        "train_data_y": 0,
+        "ideal_data_y": 0,
+        "minimal_deviation_value": 0.0,
+        "minimal_deviation_index": 0
+    }
+
+    print("result-dict: " + str(result_dict))
 
     # get number of rows in train_data
     rows_train_data = len(train_data.index)
@@ -66,6 +73,7 @@ def least_square_calculation(train_data, ideal_data):
     # 4 columns in train_data
     for column_train in range(1, columns_train_data+1, 1):
         sum_array = 0.0
+        result_dict["train_data_y"] = column_train
         print("### train-function: y" + str(column_train) + " ###")
         # 50 columns in ideal_data
         new_sum_array = 100000.0
@@ -87,10 +95,15 @@ def least_square_calculation(train_data, ideal_data):
 
         print("sum_array: " + str(new_sum_array))
         minimal_deviation = np.min(new_sum_array)
+        result_dict["minimal_deviation_value"] = minimal_deviation
         print("minimum deviation: " + str(minimal_deviation))
+
         minimal_deviation_index = np.argmin(new_sum_array)
+        result_dict["minimal_deviation_index"] = minimal_deviation_index
+        result_dict["ideal_data_y"] = minimal_deviation_index+1
         print("minimum deviation index: " + str(minimal_deviation_index))
-    return index_array
+
+    return result_dict
 
 
 if __name__ == "__main__":
