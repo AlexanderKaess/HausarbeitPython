@@ -48,8 +48,7 @@ def main():
 
 
 def least_square_calculation(train_data, ideal_data):
-    result = 0.0
-    end_result = 0.0
+    index_array = 0 #np.array()
 
     # get number of rows in train_data
     rows_train_data = len(train_data.index)
@@ -60,8 +59,8 @@ def least_square_calculation(train_data, ideal_data):
     print("columns_train_data = " + str(columns_train_data))
 
     # get number of columns in ideal_data
-    # columns_ideal_data = len(ideal_data.columns)-1
-    columns_ideal_data = 10
+    columns_ideal_data = len(ideal_data.columns)-1
+    # columns_ideal_data = 10
     print("columns_ideal_data = " + str(columns_ideal_data))
 
     # 4 columns in train_data
@@ -69,10 +68,9 @@ def least_square_calculation(train_data, ideal_data):
         sum_array = 0.0
         print("### train-function: y" + str(column_train) + " ###")
         # 50 columns in ideal_data
-        # new_column_sum = 100000.0
+        new_sum_array = 100000.0
         for column_ideal in range(1, columns_ideal_data+1, 1):
             current_column_sum = 0.0
-            print("--> ideal-function: y" + str(column_ideal))
             # create array from y column values
             train_y_array = np.array(train_data["y" + str(column_train)])
             ideal_y_array = np.array(ideal_data["y" + str(column_ideal)])
@@ -83,23 +81,16 @@ def least_square_calculation(train_data, ideal_data):
                 result = np.square(np.subtract(train_y_array[row], ideal_y_array[row]))
                 current_column_sum += result
 
-                ### just for testing, afterwards if has to be removed
-                #if row == 3:
-                #    new_column_sum = current_column_sum
-                #    break
-                ###
-
-            print("column_sum = " + str(current_column_sum))
             sum_array = np.append(sum_array, current_column_sum)
             index = 0
-            new_sum_array = np.delete(sum_array, index )
+            new_sum_array = np.delete(sum_array, index)
 
         print("sum_array: " + str(new_sum_array))
         minimal_deviation = np.min(new_sum_array)
         print("minimum deviation: " + str(minimal_deviation))
-
-
-    return end_result
+        minimal_deviation_index = np.argmin(new_sum_array)
+        print("minimum deviation index: " + str(minimal_deviation_index))
+    return index_array
 
 
 if __name__ == "__main__":
