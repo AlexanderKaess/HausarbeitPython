@@ -48,36 +48,31 @@ def main():
 
 
 def least_square_calculation(train_data, ideal_data):
-    result_dict = {
-        "train_data_y": 0,
-        "ideal_data_y": 0,
-        "minimal_deviation_value": 0.0,
-        "minimal_deviation_index": 0
-    }
-
-    print("result-dict: " + str(result_dict))
+    result_dict_list = []
 
     # get number of rows in train_data
     rows_train_data = len(train_data.index)
     print("rows = " + str(rows_train_data))
 
     # get number of columns in train_data
-    columns_train_data = len(train_data.columns)-1
+    columns_train_data = len(train_data.columns) - 1
     print("columns_train_data = " + str(columns_train_data))
 
     # get number of columns in ideal_data
-    columns_ideal_data = len(ideal_data.columns)-1
+    columns_ideal_data = len(ideal_data.columns) - 1
     # columns_ideal_data = 10
     print("columns_ideal_data = " + str(columns_ideal_data))
 
     # 4 columns in train_data
-    for column_train in range(1, columns_train_data+1, 1):
+    for column_train in range(1, columns_train_data + 1, 1):
         sum_array = 0.0
+        result_dict = {"train_data_y": 0, "ideal_data_y": 0, "minimal_deviation_value": 0.0, "minimal_deviation_index": 0 }
+
         result_dict["train_data_y"] = column_train
         print("### train-function: y" + str(column_train) + " ###")
         # 50 columns in ideal_data
         new_sum_array = 100000.0
-        for column_ideal in range(1, columns_ideal_data+1, 1):
+        for column_ideal in range(1, columns_ideal_data + 1, 1):
             current_column_sum = 0.0
             # create array from y column values
             train_y_array = np.array(train_data["y" + str(column_train)])
@@ -100,10 +95,13 @@ def least_square_calculation(train_data, ideal_data):
 
         minimal_deviation_index = np.argmin(new_sum_array)
         result_dict["minimal_deviation_index"] = minimal_deviation_index
-        result_dict["ideal_data_y"] = minimal_deviation_index+1
+        result_dict["ideal_data_y"] = minimal_deviation_index + 1
         print("minimum deviation index: " + str(minimal_deviation_index))
+        print("##### result_dict: " + str(result_dict))
+        print("")
 
-    return result_dict
+        result_dict_list.append(result_dict)
+    return result_dict_list
 
 
 if __name__ == "__main__":
