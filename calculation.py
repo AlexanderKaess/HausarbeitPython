@@ -14,16 +14,16 @@ class Calculation:
 
         # get number of rows in train_data
         rows_train_data = len(train_data.index)
-        print("rows = " + str(rows_train_data))
+        logger.info("rows = " + str(rows_train_data))
 
         # get number of columns in train_data
         columns_train_data = len(train_data.columns) - 1
-        print("columns_train_data = " + str(columns_train_data))
+        logger.info("columns_train_data = " + str(columns_train_data))
 
         # get number of columns in ideal_data
         columns_ideal_data = len(ideal_data.columns) - 1
         # columns_ideal_data = 10
-        print("columns_ideal_data = " + str(columns_ideal_data))
+        logger.info("columns_ideal_data = " + str(columns_ideal_data))
 
         # 4 columns in train_data
         for column_train in range(1, columns_train_data + 1, 1):
@@ -32,7 +32,7 @@ class Calculation:
                        "minimal_deviation_index": 0}
 
             result_dict["train_data_y"] = column_train
-            print("### train-function: y" + str(column_train) + " ###")
+            logger.info("### train-function: y" + str(column_train) + " ###")
             # 50 columns in ideal_data
             new_sum_array = 100000.0
             for column_ideal in range(1, columns_ideal_data + 1, 1):
@@ -51,17 +51,16 @@ class Calculation:
                 index = 0
                 new_sum_array = np.delete(sum_array, index)
 
-            print("sum_array: " + str(new_sum_array))
+            logger.info("sum_array: " + str(new_sum_array))
             minimal_deviation = np.min(new_sum_array)
             result_dict["minimal_deviation_value"] = minimal_deviation
-            print("minimum deviation: " + str(minimal_deviation))
+            logger.info("minimum deviation: " + str(minimal_deviation))
 
             minimal_deviation_index = np.argmin(new_sum_array)
             result_dict["minimal_deviation_index"] = minimal_deviation_index
             result_dict["ideal_data_y"] = minimal_deviation_index + 1
-            print("minimum deviation index: " + str(minimal_deviation_index))
-            print("##### result_dict: " + str(result_dict))
-            print("")
+            logger.info("minimum deviation index: " + str(minimal_deviation_index))
+            logger.info("##### result_dict: " + str(result_dict))
 
             result_dict_list.append(result_dict)
         return result_dict_list

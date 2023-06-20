@@ -1,6 +1,5 @@
 import logging
 import pandas as pd
-import numpy as np
 
 import centrallogger
 import visualization
@@ -37,17 +36,21 @@ def main():
     database.create_table_from_dataframe(test_data, test_data.name)
 
     # create plots
-    # train_visualization = visualization.Visualization(train_data, train_data.name)
-    # train_visualization.create_plot_from_dataframe()
+    train_visualization = visualization.Visualization(train_data, train_data.name)
+    train_visualization.create_plot_from_dataframe()
     # ideal_visualization = visualization.Visualization(ideal_data, ideal_data.name)
     # ideal_visualization.create_plot_from_dataframe()
 
     calc = Calculation()
-    test_result = calc.least_square_calculation(train_data, ideal_data)
-    print("testresult: " + str(test_result))
+    calc_result = calc.least_square_calculation(train_data, ideal_data)
+    print("calcresult: " + str(calc_result))
+
+    logger.info("Create calculation result table")
+    calc_result_data = pd.DataFrame(calc_result)
+    calc_result_data.name = "calc_result"
+    database.create_table_from_dataframe(calc_result_data, calc_result_data.name)
 
     print("### Finished script ###")
-
 
 
 if __name__ == "__main__":
