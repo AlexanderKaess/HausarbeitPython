@@ -36,23 +36,26 @@ def main():
     database.create_table_from_dataframe(test_data, test_data.name)
 
     # create plots
-    train_visualization = visualization.Visualization(train_data)
-    train_visualization.create_plot_from_dataframe()
+    #train_visualization = visualization.Visualization(train_data)
+    #train_visualization.create_plot_from_dataframe()
 
     # calcualtion of best fits from train data to ideal data
-    best_fits = Calculation()
-    best_fits_result = best_fits.least_square_calculation(train_data, ideal_data)
+    calculation = Calculation()
+    calculation_result = calculation.least_square_calculation(train_data, ideal_data)
     print("")
-    print("calcresult: " + str(best_fits_result))
+    print("calcresult: " + str(calculation_result))
 
     logger.info("Create calculation result table")
-    best_fits_data = pd.DataFrame(best_fits_result)
-    best_fits_data.name = "best_fits_result"
-    database.create_table_from_dataframe(best_fits_data, best_fits_data.name)
+    calculation_data = pd.DataFrame(calculation_result)
+    calculation_data.name = "best_fits_result"
+    database.create_table_from_dataframe(calculation_data, calculation_data.name)
 
-    # get the lines from ideal_data with line numbers from best_fits
+    # get the lines for best_fits
+    best_fits_data = database.create_table_bestfits(ideal_data, calculation_data)
+    print("###############")
+    print("bestfits: " + str(best_fits_data))
 
-    best_fits_visualization = visualization.Visualization(train_data, train_data)
+    best_fits_visualization = visualization.Visualization(train_data, best_fits_data)
     best_fits_visualization.create_plot_from_selection()
 
     print("### Finished script ###")

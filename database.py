@@ -55,3 +55,18 @@ class Database:
                                 schema="hausarbeit",
                                 if_exists="replace",
                                 index=False)
+
+    def create_table_bestfits(self, ideal_data, calculation_data):
+        #data = pd.Series()
+        result_data = pd.DataFrame()
+        best_ideal_functions = calculation_data["ideal_data_y"].values
+        for bf in best_ideal_functions:
+            result_column = "y" + str(bf)
+            print("ideal-data: " + result_column)
+            data = ideal_data[result_column]
+            print("+++++")
+            print(data)
+            ## add a Series to a Pandas Dataframe
+            result_data.append({data})
+        print(result_data)
+        return result_data

@@ -48,10 +48,10 @@ class Calculation:
                     current_column_sum += result
 
                 sum_array = np.append(sum_array, current_column_sum)
-                index = 0
-                new_sum_array = np.delete(sum_array, index)
+                index_to_delete = 0
+                new_sum_array = np.delete(sum_array, index_to_delete)
 
-            logger.info("sum_array: " + str(new_sum_array))
+            logger.debug("sum_array: " + str(new_sum_array))
             minimal_deviation = np.min(new_sum_array)
             result_dict["minimal_deviation_value"] = minimal_deviation
             logger.info("minimum deviation: " + str(minimal_deviation))

@@ -1,0 +1,34 @@
+2023-06-26 08:12:43,781 - main - INFO - Create training table
+2023-06-26 08:12:43,783 - main - INFO - Create ideal table
+2023-06-26 08:12:43,788 - main - INFO - Create test table
+2023-06-26 08:12:43,789 - database - INFO - Database created object
+2023-06-26 08:12:43,789 - database - INFO - Connection string created
+2023-06-26 08:12:43,810 - database - INFO - Engine object created
+2023-06-26 08:12:43,817 - database - INFO - Databank connection object created
+2023-06-26 08:12:43,817 - database - INFO - Meta data object created
+2023-06-26 08:12:43,818 - database - INFO - Create table from dataframe: train.csv
+2023-06-26 08:12:43,856 - database - INFO - Create table from dataframe: ideal.csv
+2023-06-26 08:12:43,952 - database - INFO - Create table from dataframe: test.csv
+2023-06-26 08:12:43,969 - calculation - INFO - Calculation created object
+2023-06-26 08:12:43,969 - calculation - INFO - rows = 400
+2023-06-26 08:12:43,969 - calculation - INFO - columns_train_data = 4
+2023-06-26 08:12:43,969 - calculation - INFO - columns_ideal_data = 50
+2023-06-26 08:12:43,969 - calculation - INFO - ### train-function: y1 ###
+2023-06-26 08:12:44,009 - calculation - INFO - minimum deviation: 33.71178854422821
+2023-06-26 08:12:44,010 - calculation - INFO - minimum deviation index: 35
+2023-06-26 08:12:44,010 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
+2023-06-26 08:12:44,010 - calculation - INFO - ### train-function: y2 ###
+2023-06-26 08:12:44,053 - calculation - INFO - minimum deviation: 32.62893138832121
+2023-06-26 08:12:44,053 - calculation - INFO - minimum deviation index: 10
+2023-06-26 08:12:44,053 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
+2023-06-26 08:12:44,053 - calculation - INFO - ### train-function: y3 ###
+2023-06-26 08:12:44,092 - calculation - INFO - minimum deviation: 33.11847188090256
+2023-06-26 08:12:44,092 - calculation - INFO - minimum deviation index: 1
+2023-06-26 08:12:44,092 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
+2023-06-26 08:12:44,092 - calculation - INFO - ### train-function: y4 ###
+2023-06-26 08:12:44,131 - calculation - INFO - minimum deviation: 31.75243110139478
+2023-06-26 08:12:44,131 - calculation - INFO - minimum deviation index: 32
+2023-06-26 08:12:44,131 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
+2023-06-26 08:12:44,131 - main - INFO - Create calculation result table
+2023-06-26 08:12:44,131 - database - INFO - Create table from dataframe: best_fits_result
+2023-06-26 08:12:44,158 - visualization - INFO - source-dataframe: train.csv
