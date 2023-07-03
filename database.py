@@ -1,6 +1,7 @@
 import logging
 import sqlalchemy as db
 import pandas as pd
+import numpy as np
 import os
 
 logger = logging.getLogger("HAUSARBEIT")
@@ -57,16 +58,12 @@ class Database:
                                 index=False)
 
     def create_table_bestfits(self, ideal_data, calculation_data):
-        #data = pd.Series()
+        logger.info("Create table for bestfits")
         result_data = pd.DataFrame()
+        result_data["x"] = np.linspace(-20, 20, 400, endpoint=False)
         best_ideal_functions = calculation_data["ideal_data_y"].values
         for bf in best_ideal_functions:
             result_column = "y" + str(bf)
-            print("ideal-data: " + result_column)
             data = ideal_data[result_column]
-            print("+++++")
-            print(data)
-            ## add a Series to a Pandas Dataframe
-            result_data.append({data})
-        print(result_data)
+            result_data[result_column] = data.values
         return result_data

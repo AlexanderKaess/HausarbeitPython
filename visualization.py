@@ -52,9 +52,10 @@ class Visualization:
         plt.figure(figsize=(15, 8))
         # plot all the line from dataframes
         for y_index in df_source:
+            print(y_index)
             if y_index != "x":
                 plt.plot(df_source.x, df_source[y_index], label=y_index)
-                plt.plot(df_selector.x, df_selector[y_index], label=y_index, linestyle="dashed")
+                #plt.plot(df_selector.index[0], df_selector[y_index], label=y_index, linestyle="dashed")
 
         plt.legend(loc=(1.01, 0.0))
         plt.grid(True, color="k")
