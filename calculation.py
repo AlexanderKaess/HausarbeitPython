@@ -28,8 +28,10 @@ class Calculation:
         # 4 columns in train_data
         for column_train in range(1, columns_train_data + 1, 1):
             sum_array = 0.0
-            result_dict = {"train_data_y": 0, "ideal_data_y": 0, "minimal_deviation_value": 0.0,
-                       "minimal_deviation_index": 0}
+            result_dict = {"train_data_y": 0,
+                           "ideal_data_y": 0, #
+                           "minimal_deviation_value": 0.0,
+                           "minimal_deviation_index": 0}
 
             result_dict["train_data_y"] = column_train
             logger.info("### train-function: y" + str(column_train) + " ###")
@@ -54,12 +56,12 @@ class Calculation:
             logger.debug("sum_array: " + str(new_sum_array))
             minimal_deviation = np.min(new_sum_array)
             result_dict["minimal_deviation_value"] = minimal_deviation
-            logger.info("minimum deviation: " + str(minimal_deviation))
+            logger.debug("minimum deviation: " + str(minimal_deviation))
 
             minimal_deviation_index = np.argmin(new_sum_array)
             result_dict["minimal_deviation_index"] = minimal_deviation_index
             result_dict["ideal_data_y"] = minimal_deviation_index + 1
-            logger.info("minimum deviation index: " + str(minimal_deviation_index))
+            logger.debug("minimum deviation index: " + str(minimal_deviation_index))
             logger.info("##### result_dict: " + str(result_dict))
 
             result_dict_list.append(result_dict)

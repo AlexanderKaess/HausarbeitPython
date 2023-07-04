@@ -35,10 +35,6 @@ def main():
     database.create_table_from_dataframe(ideal_data, ideal_data.name)
     database.create_table_from_dataframe(test_data, test_data.name)
 
-    # create plots
-    train_visualization = visualization.Visualization(train_data)
-    train_visualization.create_plot_from_dataframe()
-
     # calcualtion of best fits from train data to ideal data
     calculation = Calculation()
     calculation_result = calculation.least_square_calculation(train_data, ideal_data)
@@ -54,10 +50,8 @@ def main():
     best_fits_data = database.create_table_bestfits(ideal_data, calculation_data)
     best_fits_data.name = "bestfits"
     database.create_table_from_dataframe(best_fits_data, best_fits_data.name)
-    print("###############")
-    print("bestfits: ")
-    print(best_fits_data)
 
+    # visualize the train and best_fits lines in one plot
     best_fits_visualization = visualization.Visualization(train_data, best_fits_data)
     best_fits_visualization.create_plot_from_selection()
 
