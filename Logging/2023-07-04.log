@@ -1,33 +1,35 @@
-2023-07-04 12:21:22,242 - main - INFO - Create training table
-2023-07-04 12:21:22,244 - main - INFO - Create ideal table
-2023-07-04 12:21:22,249 - main - INFO - Create test table
-2023-07-04 12:21:22,250 - database - INFO - Database created object
-2023-07-04 12:21:22,250 - database - INFO - Connection string created
-2023-07-04 12:21:22,276 - database - INFO - Engine object created
-2023-07-04 12:21:22,282 - database - INFO - Databank connection object created
-2023-07-04 12:21:22,282 - database - INFO - Meta data object created
-2023-07-04 12:21:22,282 - database - INFO - Create table from dataframe: train.csv
-2023-07-04 12:21:22,319 - database - INFO - Create table from dataframe: ideal.csv
-2023-07-04 12:21:22,411 - database - INFO - Create table from dataframe: test.csv
-2023-07-04 12:21:22,424 - calculation - INFO - Calculation created object
-2023-07-04 12:21:22,424 - calculation - INFO - rows = 400
-2023-07-04 12:21:22,425 - calculation - INFO - columns_train_data = 4
-2023-07-04 12:21:22,425 - calculation - INFO - columns_ideal_data = 50
-2023-07-04 12:21:22,425 - calculation - INFO - ### train-function: y1 ###
-2023-07-04 12:21:22,463 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
-2023-07-04 12:21:22,463 - calculation - INFO - ### train-function: y2 ###
-2023-07-04 12:21:22,504 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
-2023-07-04 12:21:22,505 - calculation - INFO - ### train-function: y3 ###
-2023-07-04 12:21:22,543 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
-2023-07-04 12:21:22,543 - calculation - INFO - ### train-function: y4 ###
-2023-07-04 12:21:22,581 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
-2023-07-04 12:21:22,581 - main - INFO - Create calculation result table
-2023-07-04 12:21:22,582 - database - INFO - Create table from dataframe: best_fits_result
-2023-07-04 12:21:22,597 - database - INFO - Create table for bestfits
-2023-07-04 12:21:22,599 - database - INFO - Create table from dataframe: bestfits
-2023-07-04 12:21:22,621 - visualization - INFO - source-dataframe: train.csv
-2023-07-04 12:21:22,621 - visualization - INFO - selector-dataframe: bestfits
-2023-07-04 12:21:22,621 - visualization - INFO - Create plot from selection
-2023-07-04 12:21:22,729 - visualization - INFO - Create plot source dataframe
-2023-07-04 12:21:22,746 - visualization - INFO - Create plot selector dataframe
-2023-07-04 12:21:22,753 - visualization - INFO - Show plot: best-fits
+2023-07-04 12:40:59,715 - main - INFO - Create training table
+2023-07-04 12:40:59,724 - main - INFO - Create ideal table
+2023-07-04 12:40:59,730 - main - INFO - Create test table
+2023-07-04 12:40:59,732 - database - INFO - Database created object
+2023-07-04 12:40:59,732 - database - INFO - Connection string created
+2023-07-04 12:40:59,770 - database - INFO - Engine object created
+2023-07-04 12:40:59,780 - database - INFO - Databank connection object created
+2023-07-04 12:40:59,780 - database - INFO - Meta data object created
+2023-07-04 12:40:59,780 - database - INFO - Create table from dataframe: train.csv
+2023-07-04 12:40:59,822 - database - INFO - Create table from dataframe: ideal.csv
+2023-07-04 12:40:59,917 - database - INFO - Create table from dataframe: test.csv
+2023-07-04 12:40:59,931 - visualization - INFO - source-dataframe: train.csv
+2023-07-04 12:41:00,073 - visualization - INFO - Show plot: train.csv
+2023-07-04 12:41:04,819 - calculation - INFO - Calculation created object
+2023-07-04 12:41:04,819 - calculation - INFO - rows = 400
+2023-07-04 12:41:04,819 - calculation - INFO - columns_train_data = 4
+2023-07-04 12:41:04,819 - calculation - INFO - columns_ideal_data = 50
+2023-07-04 12:41:04,819 - calculation - INFO - ### train-function: y1 ###
+2023-07-04 12:41:04,859 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
+2023-07-04 12:41:04,859 - calculation - INFO - ### train-function: y2 ###
+2023-07-04 12:41:04,896 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
+2023-07-04 12:41:04,896 - calculation - INFO - ### train-function: y3 ###
+2023-07-04 12:41:04,934 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
+2023-07-04 12:41:04,934 - calculation - INFO - ### train-function: y4 ###
+2023-07-04 12:41:04,970 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
+2023-07-04 12:41:04,970 - main - INFO - Create calculation result table
+2023-07-04 12:41:04,973 - database - INFO - Create table from dataframe: best_fits_result
+2023-07-04 12:41:04,991 - database - INFO - Create table for bestfits
+2023-07-04 12:41:04,994 - database - INFO - Create table from dataframe: bestfits
+2023-07-04 12:41:05,015 - visualization - INFO - source-dataframe: train.csv
+2023-07-04 12:41:05,015 - visualization - INFO - selector-dataframe: bestfits
+2023-07-04 12:41:05,015 - visualization - INFO - Create plot from selection
+2023-07-04 12:41:05,029 - visualization - INFO - Create plot source dataframe
+2023-07-04 12:41:05,042 - visualization - INFO - Create plot selector dataframe
+2023-07-04 12:41:05,048 - visualization - INFO - Show plot: best-fits
