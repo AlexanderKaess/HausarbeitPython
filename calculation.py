@@ -1,6 +1,8 @@
 import logging
 
 import numpy as np
+import pandas as pd
+
 
 logger = logging.getLogger("HAUSARBEIT")
 
@@ -29,7 +31,7 @@ class Calculation:
         for column_train in range(1, columns_train_data + 1, 1):
             sum_array = 0.0
             result_dict = {"train_data_y": 0,
-                           "ideal_data_y": 0, #
+                           "ideal_data_y": 0,
                            "minimal_deviation_value": 0.0,
                            "minimal_deviation_index": 0}
 
@@ -66,3 +68,24 @@ class Calculation:
 
             result_dict_list.append(result_dict)
         return result_dict_list
+
+    # calculation of M
+    def max_deviation_best_fits_to_test_data_calculation(self, best_fits_data, test_data):
+        result = 0
+        return result
+
+    # calculation of N
+    def max_deviation_train_data_to_best_fits_calculation(self, train_data, best_fits_data):
+        result = 0
+        return result
+
+    def validation_calculation(self, train_data, best_fits_data, test_data):
+        result = 0
+
+        sorted_test_data = test_data.sort_values(by="x")
+        print(sorted_test_data)
+
+        max_best_fits_to_test = self.max_deviation_best_fits_to_test_data_calculation(best_fits_data, test_data)
+        max_train_to_best_fits = self.max_deviation_train_data_to_best_fits_calculation(train_data, best_fits_data)
+
+        return result
