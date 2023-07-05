@@ -3,7 +3,6 @@ import logging
 import numpy as np
 import pandas as pd
 
-
 logger = logging.getLogger("HAUSARBEIT")
 
 
@@ -74,11 +73,37 @@ class Calculation:
         result = 0
         return result
 
-    # calculation of N
+    # calculation of N e.g. N36 = max(train_y1 - best_fits_y36)
     def max_deviation_train_data_to_best_fits_calculation(self, train_data, best_fits_data):
-        result = 0
-        return result
+        result_dict_list = []
+        columns_train_data = len(train_data.columns) - 1
+        rows_train_data = len(train_data.index)
 
+        for column_train in range(1, columns_train_data + 1, 1):
+            result_dict = {"N": 0,
+                           "maximal_deviation_value": 0.0,
+                           "maximal_deviation_index": 0}
+
+            # create array from y column values
+            current_train_column = train_data.columns[column_train]
+            train_y_array = np.array(train_data[current_train_column])
+            print("-----" + str(current_train_column))
+            print(train_y_array)
+            print(" ")
+            current_best_fits_column = best_fits_data.columns[column_train]
+            best_fits_y_array = np.array(best_fits_data[current_best_fits_column])
+            print("-----36----" + str(current_best_fits_column))
+            print(best_fits_y_array)
+
+            # 400 rows to subtract
+            for row in range(0, rows_train_data, 1):
+                result = np.subtract(train_y_array[row], best_fits_y_array[row])
+                maximal_deviation = np.max(result)
+
+        result_dict_list.append(result_dict)
+        return result_dict_list
+
+    # calculation of M < (sqrt(2)) * N
     def validation_calculation(self, train_data, best_fits_data, test_data):
         result = 0
 

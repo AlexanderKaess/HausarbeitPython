@@ -60,7 +60,7 @@ def main():
     best_fits_visualization.create_plot_from_selection()
 
     validation_result = calculation.validation_calculation(train_data, best_fits_data, test_data)
-    print(validation_result)
+    print("validation_result: " + str(validation_result))
 
     print("### Finished script ###")
 
