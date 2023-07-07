@@ -1,7 +1,5 @@
 import logging
-
 import numpy as np
-import pandas as pd
 
 logger = logging.getLogger("HAUSARBEIT")
 
@@ -70,8 +68,54 @@ class Calculation:
 
     # calculation of M
     def max_deviation_best_fits_to_test_data_calculation(self, best_fits_data, test_data):
-        result = 0
-        return result
+        result_dict_list = []
+        rows_test_data = len(test_data.index)
+        columns_best_fits_data = len(best_fits_data.columns) - 1
+
+        for column_best in range(1, columns_best_fits_data+1, 1):
+            sum_array = 0.0
+            result_dict = {"best_fits_data": 0,
+                           "M": 0,
+                           "maximal_deviation_value": 0.0,
+                           "maximal_deviation_index": 0}
+
+            result_dict["best_fits_data"] = column_best
+            result_dict["M"] = column_best
+            # access to column 1 via index of columns
+            print(best_fits_data._series[column_best])
+            print(column_best)
+
+            for row in range(0, rows_test_data, 1):
+                print("test_data_row_index: " + str(row))
+                print("x: " + str(test_data._get_value(row, "x")))
+                print("y: " + str(test_data._get_value(row, "y")))
+
+                print("best_fits_row_index: " + str(row))
+                print("x: " + str(best_fits_data._get_value(row, "x")))
+                print("y: " + str(best_fits_data._get_value(row, "y" + str(column_best))))
+
+                x_test_data_value = test_data._get_value(row, "x")
+                y_test_data_value = test_data._get_value(row, "y")
+                x_best_fits_value = best_fits_data._get_value(row, "x")
+                y_best_fits_value = best_fits_data._get_value(row, "y" + str(column_best))
+
+                # if quere whether x test data == x best fits
+                y_from_best_fits_data = 0.0
+                y_from_test_data = 0.0
+
+                result = np.subtract(y_from_best_fits_data, y_from_test_data)
+                sum_array = np.append(sum_array, result)
+
+            index_to_delete = 0
+            new_sum_array = np.delete(sum_array, index_to_delete)
+            maximal_deviation = np.max(new_sum_array)
+            result_dict["maximal_deviation_value"] = maximal_deviation
+            maximal_deviation_index = np.argmax(new_sum_array)
+            result_dict["maximal_deviation_index"] = maximal_deviation_index
+
+            result_dict_list.append(result_dict)
+        logger.info("result_dict: " + str(result_dict_list))
+        return result_dict_list
 
     # calculation of N e.g. N36 = max(train_y1 - best_fits_y36)
     def max_deviation_train_data_to_best_fits_calculation(self, train_data, best_fits_data):
@@ -115,12 +159,10 @@ class Calculation:
 
     # calculation of M < (sqrt(2)) * N
     def validation_calculation(self, train_data, best_fits_data, test_data):
+        logger.info("Validation calculation")
         result = 0
 
-        sorted_test_data = test_data.sort_values(by="x")
-        print(sorted_test_data)
-
-        result_n = self.max_deviation_best_fits_to_test_data_calculation(best_fits_data, test_data)
-        result_m = self.max_deviation_train_data_to_best_fits_calculation(train_data, best_fits_data)
+        result_m = self.max_deviation_best_fits_to_test_data_calculation(best_fits_data, test_data)
+        result_n = self.max_deviation_train_data_to_best_fits_calculation(train_data, best_fits_data)
 
         return result

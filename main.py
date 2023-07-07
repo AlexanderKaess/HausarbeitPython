@@ -24,9 +24,11 @@ def main():
     ideal_data = pd.read_csv("./Data/ideal.csv")
     ideal_data.name = "ideal.csv"
 
-    logger.info("Create test table")
+    logger.info("Create sorted test table")
     test_data = pd.read_csv("./Data/test.csv")
     test_data.name = "test.csv"
+    sorted_test_data = test_data.sort_values(by="x", ignore_index=True)
+    sorted_test_data.name = "sorted_test.csv"
 
     # create database and insert dataframes
     database = Database()
@@ -34,6 +36,7 @@ def main():
     database.create_table_from_dataframe(train_data, train_data.name)
     database.create_table_from_dataframe(ideal_data, ideal_data.name)
     database.create_table_from_dataframe(test_data, test_data.name)
+    database.create_table_from_dataframe(sorted_test_data, sorted_test_data.name)
 
     # create visualization for train_data
     train_visualization = visualization.Visualization(train_data)
@@ -59,7 +62,7 @@ def main():
     best_fits_visualization = visualization.Visualization(train_data, best_fits_data)
     best_fits_visualization.create_plot_from_selection()
 
-    validation_result = calculation.validation_calculation(train_data, best_fits_data, test_data)
+    validation_result = calculation.validation_calculation(train_data, best_fits_data, sorted_test_data)
     print("validation_result: " + str(validation_result))
 
     print("### Finished script ###")
