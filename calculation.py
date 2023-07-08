@@ -70,10 +70,11 @@ class Calculation:
     def max_deviation_best_fits_to_test_data_calculation(self, best_fits_data, test_data):
         result_dict_list = []
         rows_test_data = len(test_data.index)
-        columns_best_fits_data = len(best_fits_data.columns) - 1
+        columns_best_fits_data = len(best_fits_data.columns)
 
-        for column_best in range(1, columns_best_fits_data+1, 1):
-            sum_array = 0.0
+        logger.info("Get column values from best_fits_data and corresponding test_data")
+        for column_best in range(1, columns_best_fits_data, 1):
+            result_array = 0.0
             result_dict = {"best_fits_data": 0,
                            "M": 0,
                            "maximal_deviation_value": 0.0,
@@ -81,36 +82,40 @@ class Calculation:
 
             result_dict["best_fits_data"] = column_best
             result_dict["M"] = column_best
-            # access to column 1 via index of columns
-            print(best_fits_data._series[column_best])
-            print(column_best)
 
             for row in range(0, rows_test_data, 1):
+                print("Column best: " + str(column_best))
+
+                # .iloc[row, column]
+                x_test_data_value = test_data.iloc[row, 0]
+                y_test_data_value = test_data.iloc[row, 1]
+                print("value: " + str(x_test_data_value))
+                row_index = best_fits_data["x"] #[x_test_data_value]
+                print(row_index)
+
+                # ich brauche den row_index in dem x von test_data gleich x von best_fits_data
+
+                #y_best_fits_value = best_fits_data.iloc[row_index, column_best]
+                y_best_fits_value = 1.0
+
                 print("test_data_row_index: " + str(row))
-                print("x: " + str(test_data._get_value(row, "x")))
-                print("y: " + str(test_data._get_value(row, "y")))
+                print("x: " + str(x_test_data_value))
+                print("y: " + str(y_test_data_value))
 
-                print("best_fits_row_index: " + str(row))
-                print("x: " + str(best_fits_data._get_value(row, "x")))
-                print("y: " + str(best_fits_data._get_value(row, "y" + str(column_best))))
+                print("best_fits_row_index: " + str(row_index))
+                print("y36: " + str(y_best_fits_value))
 
-                x_test_data_value = test_data._get_value(row, "x")
-                y_test_data_value = test_data._get_value(row, "y")
-                x_best_fits_value = best_fits_data._get_value(row, "x")
-                y_best_fits_value = best_fits_data._get_value(row, "y" + str(column_best))
-
-                # if quere whether x test data == x best fits
-                y_from_best_fits_data = 0.0
-                y_from_test_data = 0.0
-
-                result = np.subtract(y_from_best_fits_data, y_from_test_data)
-                sum_array = np.append(sum_array, result)
+                logger.info("x value is " + str(x_test_data_value) + ", calculation of deviation ...")
+                result = np.subtract(y_best_fits_value, y_test_data_value)
+                logger.info("Result: " + str(y_best_fits_value) + " - " +
+                            str("(") + str(y_test_data_value) + str(")") + " = " + str(result))
+                result_array = np.append(result_array, result)
 
             index_to_delete = 0
-            new_sum_array = np.delete(sum_array, index_to_delete)
-            maximal_deviation = np.max(new_sum_array)
+            new_result_array = np.delete(result_array, index_to_delete)
+            maximal_deviation = np.max(new_result_array)
             result_dict["maximal_deviation_value"] = maximal_deviation
-            maximal_deviation_index = np.argmax(new_sum_array)
+            maximal_deviation_index = np.argmax(new_result_array)
             result_dict["maximal_deviation_index"] = maximal_deviation_index
 
             result_dict_list.append(result_dict)
@@ -120,12 +125,12 @@ class Calculation:
     # calculation of N e.g. N36 = max(train_y1 - best_fits_y36)
     def max_deviation_train_data_to_best_fits_calculation(self, train_data, best_fits_data):
         result_dict_list = []
-        columns_train_data = len(train_data.columns) - 1
+        columns_train_data = len(train_data.columns)
         rows_train_data = len(train_data.index)
 
         logger.info("Get column values from train_data and corresponding best_fits_data")
-        for column_train in range(1, columns_train_data + 1, 1):
-            sum_array = 0.0
+        for column_train in range(1, columns_train_data, 1):
+            result_array = 0.0
             result_dict = {"train_data": 0,
                            "best_fits_data": 0,
                            "N": 0,
@@ -144,13 +149,13 @@ class Calculation:
             # 400 rows to subtract
             for row in range(0, rows_train_data, 1):
                 result = np.subtract(train_y_array[row], best_fits_y_array[row])
-                sum_array = np.append(sum_array, result)
+                result_array = np.append(result_array, result)
 
             index_to_delete = 0
-            new_sum_array = np.delete(sum_array, index_to_delete)
-            maximal_deviation = np.max(new_sum_array)
+            new_result_array = np.delete(result_array, index_to_delete)
+            maximal_deviation = np.max(new_result_array)
             result_dict["maximal_deviation_value"] = maximal_deviation
-            maximal_deviation_index = np.argmax(new_sum_array)
+            maximal_deviation_index = np.argmax(new_result_array)
             result_dict["maximal_deviation_index"] = maximal_deviation_index
 
             result_dict_list.append(result_dict)
