@@ -87,46 +87,30 @@ class Calculation:
                            "maximal_deviation_index": 0}
 
             for row in test_data.index:
-                print("############")
-                print("Column best: " + str(column_best))
-                print("row index: " + str(row))
+                logger.info("############")
+                logger.info("Column best: " + str(column_best))
+                logger.info("test_data_row_index: " + str(row))
 
                 # .loc[row, column] = get value of location
                 x_value_test_data = test_data.loc[row, "x"]
                 y_value_test_data = test_data.loc[row, "y"]
-                print("x_value: " + str(x_value_test_data))
-                print("y_value: " + str(y_value_test_data))
+                logger.info("x_value: " + str(x_value_test_data))
+                logger.info("y_value: " + str(y_value_test_data))
 
-                # ich brauche den row_index in dem x von test_data gleich x von best_fits_data
                 selection = best_fits_data["x"]
-                print("selection: ")
-                print("y_value: " + str(selection[0]))
-                print("y_value: " + str(selection[1]))
-                print("y_value: " + str(selection[2]))
-                print("y_value: " + str(selection[3]))
-                print("y_value: " + str(selection[4]))
+                logger.info("y_value to find from x = " + str(selection[row]))
 
                 # get index of x_value in the best_fits_Data
                 position_index = pd.Index(selection).get_loc(x_value_test_data)
-                print("position in best_fits_data: " + str(position_index))
 
-                y_value_best_fits = selection.get(x_value_test_data)
-                print("y_value_best_fits: " + str(y_value_best_fits))
-
-                if y_value_best_fits == None:
+                # .loc[row, column] = get value of location
+                y_value_best_fits = best_fits_data.loc[position_index, column_best]
+                if y_value_best_fits is None:
                     logger.info("no y value found in best_fits for x: " + str(x_value_test_data))
                     continue
-                print("y_value_best_fits: " + str(y_value_best_fits))
-
-                #y_value_best_fits = best_fits_data.loc[row_index, column_best]
-                y_value_best_fits = 1.0
-
-                print("test_data_row_index: " + str(row))
-                print("x: " + str(x_value_test_data))
-                print("y: " + str(y_value_test_data))
-
-                print("best_fits_row_index: " + str(1234567))
-                print("column : " + str(column_best) + str(y_value_best_fits))
+                logger.info("column : " + str(column_best) +
+                            " --> position_in_column: " + str(position_index) +
+                            " --> y_value: " + str(y_value_best_fits))
 
                 logger.info("x value is " + str(x_value_test_data) + ", calculation of deviation ...")
                 result = np.subtract(y_value_best_fits, y_value_test_data)
