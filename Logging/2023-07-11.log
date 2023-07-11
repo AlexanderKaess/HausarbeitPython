@@ -1,296 +1,296 @@
-2023-07-11 16:50:48,822 - main - INFO - Create training table
-2023-07-11 16:50:48,825 - main - INFO - Create ideal table
-2023-07-11 16:50:48,829 - main - INFO - Create sorted test table
-2023-07-11 16:50:48,831 - database - INFO - Database created object
-2023-07-11 16:50:48,831 - database - INFO - Connection string created
-2023-07-11 16:50:48,851 - database - INFO - Engine object created
-2023-07-11 16:50:48,857 - database - INFO - Databank connection object created
-2023-07-11 16:50:48,857 - database - INFO - Meta data object created
-2023-07-11 16:50:48,857 - database - INFO - Create table from dataframe: train.csv
-2023-07-11 16:50:48,896 - database - INFO - Create table from dataframe: ideal.csv
-2023-07-11 16:50:48,986 - database - INFO - Create table from dataframe: test.csv
-2023-07-11 16:50:49,000 - database - INFO - Create table from dataframe: sorted_test.csv
-2023-07-11 16:50:49,013 - visualization - INFO - source-dataframe: train.csv
-2023-07-11 16:50:49,140 - visualization - INFO - Show plot: train.csv
-2023-07-11 16:50:51,240 - calculation - INFO - Calculation created object
-2023-07-11 16:50:51,240 - calculation - INFO - rows = 400
-2023-07-11 16:50:51,240 - calculation - INFO - columns_train_data = 4
-2023-07-11 16:50:51,240 - calculation - INFO - columns_ideal_data = 50
-2023-07-11 16:50:51,240 - calculation - INFO - ### train-function: y1 ###
-2023-07-11 16:50:51,277 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
-2023-07-11 16:50:51,278 - calculation - INFO - ### train-function: y2 ###
-2023-07-11 16:50:51,314 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
-2023-07-11 16:50:51,314 - calculation - INFO - ### train-function: y3 ###
-2023-07-11 16:50:51,354 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
-2023-07-11 16:50:51,354 - calculation - INFO - ### train-function: y4 ###
-2023-07-11 16:50:51,391 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
-2023-07-11 16:50:51,391 - main - INFO - Create calculation result table
-2023-07-11 16:50:51,392 - database - INFO - Create table from dataframe: best_fits_result
-2023-07-11 16:50:51,411 - database - INFO - Create table for bestfits
-2023-07-11 16:50:51,414 - database - INFO - Create table from dataframe: bestfits
-2023-07-11 16:50:51,454 - visualization - INFO - source-dataframe: train.csv
-2023-07-11 16:50:51,454 - visualization - INFO - selector-dataframe: bestfits
-2023-07-11 16:50:51,455 - visualization - INFO - Create plot from selection
-2023-07-11 16:50:51,480 - visualization - INFO - Create plot source dataframe
-2023-07-11 16:50:51,502 - visualization - INFO - Create plot selector dataframe
-2023-07-11 16:50:51,514 - visualization - INFO - Show plot: best-fits
-2023-07-11 16:50:52,223 - calculation - INFO - Validation calculation
-2023-07-11 16:50:52,223 - calculation - INFO - Get column values from best_fits_data and corresponding test_data
-2023-07-11 16:50:52,223 - calculation - INFO - ############
-2023-07-11 16:50:52,223 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,223 - calculation - INFO - test_data_row_index: 0
-2023-07-11 16:50:52,224 - calculation - INFO - x_value: -20.0
-2023-07-11 16:50:52,224 - calculation - INFO - y_value: -19.347134
-2023-07-11 16:50:52,224 - calculation - INFO - y_value to find from x = -20.0
-2023-07-11 16:50:52,224 - calculation - INFO - column : y36 --> position_in_column: 0 --> y_value: 100.0
-2023-07-11 16:50:52,224 - calculation - INFO - x value is -20.0, calculation of deviation ...
-2023-07-11 16:50:52,224 - calculation - INFO - Result: 100.0 - (-19.347134) = 119.347134
-2023-07-11 16:50:52,224 - calculation - INFO - ############
-2023-07-11 16:50:52,224 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,224 - calculation - INFO - test_data_row_index: 1
-2023-07-11 16:50:52,225 - calculation - INFO - x_value: -20.0
-2023-07-11 16:50:52,225 - calculation - INFO - y_value: 99.261604
-2023-07-11 16:50:52,225 - calculation - INFO - y_value to find from x = -19.9
-2023-07-11 16:50:52,225 - calculation - INFO - column : y36 --> position_in_column: 0 --> y_value: 100.0
-2023-07-11 16:50:52,225 - calculation - INFO - x value is -20.0, calculation of deviation ...
-2023-07-11 16:50:52,225 - calculation - INFO - Result: 100.0 - (99.261604) = 0.7383959999999945
-2023-07-11 16:50:52,225 - calculation - INFO - ############
-2023-07-11 16:50:52,225 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,225 - calculation - INFO - test_data_row_index: 2
-2023-07-11 16:50:52,225 - calculation - INFO - x_value: -18.1
-2023-07-11 16:50:52,226 - calculation - INFO - y_value: 35.745747
-2023-07-11 16:50:52,226 - calculation - INFO - y_value to find from x = -19.8
-2023-07-11 16:50:52,226 - calculation - INFO - column : y36 --> position_in_column: 19 --> y_value: 90.5
-2023-07-11 16:50:52,226 - calculation - INFO - x value is -18.1, calculation of deviation ...
-2023-07-11 16:50:52,226 - calculation - INFO - Result: 90.5 - (35.745747) = 54.754253
-2023-07-11 16:50:52,226 - calculation - INFO - ############
-2023-07-11 16:50:52,226 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,226 - calculation - INFO - test_data_row_index: 3
-2023-07-11 16:50:52,226 - calculation - INFO - x_value: -17.5
-2023-07-11 16:50:52,226 - calculation - INFO - y_value: 16.389914
-2023-07-11 16:50:52,226 - calculation - INFO - y_value to find from x = -19.7
-2023-07-11 16:50:52,227 - calculation - INFO - column : y36 --> position_in_column: 25 --> y_value: 87.5
-2023-07-11 16:50:52,227 - calculation - INFO - x value is -17.5, calculation of deviation ...
-2023-07-11 16:50:52,227 - calculation - INFO - Result: 87.5 - (16.389914) = 71.110086
-2023-07-11 16:50:52,227 - calculation - INFO - ############
-2023-07-11 16:50:52,227 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,227 - calculation - INFO - test_data_row_index: 4
-2023-07-11 16:50:52,227 - calculation - INFO - x_value: -17.4
-2023-07-11 16:50:52,227 - calculation - INFO - y_value: 16.13856
-2023-07-11 16:50:52,227 - calculation - INFO - y_value to find from x = -19.6
-2023-07-11 16:50:52,227 - calculation - INFO - column : y36 --> position_in_column: 26 --> y_value: 87.0
-2023-07-11 16:50:52,227 - calculation - INFO - x value is -17.4, calculation of deviation ...
-2023-07-11 16:50:52,227 - calculation - INFO - Result: 87.0 - (16.13856) = 70.86144
-2023-07-11 16:50:52,227 - calculation - INFO - ############
-2023-07-11 16:50:52,228 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,228 - calculation - INFO - test_data_row_index: 5
-2023-07-11 16:50:52,228 - calculation - INFO - x_value: -17.1
-2023-07-11 16:50:52,228 - calculation - INFO - y_value: 15.988693
-2023-07-11 16:50:52,228 - calculation - INFO - y_value to find from x = -19.5
-2023-07-11 16:50:52,228 - calculation - INFO - column : y36 --> position_in_column: 29 --> y_value: 85.5
-2023-07-11 16:50:52,228 - calculation - INFO - x value is -17.1, calculation of deviation ...
-2023-07-11 16:50:52,228 - calculation - INFO - Result: 85.5 - (15.988693) = 69.511307
-2023-07-11 16:50:52,228 - calculation - INFO - ############
-2023-07-11 16:50:52,228 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,228 - calculation - INFO - test_data_row_index: 6
-2023-07-11 16:50:52,229 - calculation - INFO - x_value: -16.7
-2023-07-11 16:50:52,229 - calculation - INFO - y_value: 16.142563
-2023-07-11 16:50:52,229 - calculation - INFO - y_value to find from x = -19.4
-2023-07-11 16:50:52,229 - calculation - INFO - column : y36 --> position_in_column: 33 --> y_value: 83.5
-2023-07-11 16:50:52,229 - calculation - INFO - x value is -16.7, calculation of deviation ...
-2023-07-11 16:50:52,229 - calculation - INFO - Result: 83.5 - (16.142563) = 67.357437
-2023-07-11 16:50:52,229 - calculation - INFO - ############
-2023-07-11 16:50:52,229 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,229 - calculation - INFO - test_data_row_index: 7
-2023-07-11 16:50:52,229 - calculation - INFO - x_value: -16.6
-2023-07-11 16:50:52,229 - calculation - INFO - y_value: -1.8238432
-2023-07-11 16:50:52,229 - calculation - INFO - y_value to find from x = -19.3
-2023-07-11 16:50:52,230 - calculation - INFO - column : y36 --> position_in_column: 34 --> y_value: 83.0
-2023-07-11 16:50:52,230 - calculation - INFO - x value is -16.6, calculation of deviation ...
-2023-07-11 16:50:52,230 - calculation - INFO - Result: 83.0 - (-1.8238432) = 84.8238432
-2023-07-11 16:50:52,230 - calculation - INFO - ############
-2023-07-11 16:50:52,230 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,230 - calculation - INFO - test_data_row_index: 8
-2023-07-11 16:50:52,230 - calculation - INFO - x_value: -16.5
-2023-07-11 16:50:52,230 - calculation - INFO - y_value: 0.4701114
-2023-07-11 16:50:52,230 - calculation - INFO - y_value to find from x = -19.2
-2023-07-11 16:50:52,230 - calculation - INFO - column : y36 --> position_in_column: 35 --> y_value: 82.5
-2023-07-11 16:50:52,230 - calculation - INFO - x value is -16.5, calculation of deviation ...
-2023-07-11 16:50:52,230 - calculation - INFO - Result: 82.5 - (0.4701114) = 82.0298886
-2023-07-11 16:50:52,230 - calculation - INFO - ############
-2023-07-11 16:50:52,230 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,231 - calculation - INFO - test_data_row_index: 9
-2023-07-11 16:50:52,231 - calculation - INFO - x_value: -16.2
-2023-07-11 16:50:52,231 - calculation - INFO - y_value: 80.32605
-2023-07-11 16:50:52,231 - calculation - INFO - y_value to find from x = -19.1
-2023-07-11 16:50:52,231 - calculation - INFO - column : y36 --> position_in_column: 38 --> y_value: 81.0
-2023-07-11 16:50:52,231 - calculation - INFO - x value is -16.2, calculation of deviation ...
-2023-07-11 16:50:52,231 - calculation - INFO - Result: 81.0 - (80.32605) = 0.6739500000000049
-2023-07-11 16:50:52,231 - calculation - INFO - ############
-2023-07-11 16:50:52,231 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,231 - calculation - INFO - test_data_row_index: 10
-2023-07-11 16:50:52,231 - calculation - INFO - x_value: -16.2
-2023-07-11 16:50:52,231 - calculation - INFO - y_value: -0.62903035
-2023-07-11 16:50:52,231 - calculation - INFO - y_value to find from x = -19.0
-2023-07-11 16:50:52,232 - calculation - INFO - column : y36 --> position_in_column: 38 --> y_value: 81.0
-2023-07-11 16:50:52,232 - calculation - INFO - x value is -16.2, calculation of deviation ...
-2023-07-11 16:50:52,232 - calculation - INFO - Result: 81.0 - (-0.62903035) = 81.62903035
-2023-07-11 16:50:52,232 - calculation - INFO - ############
-2023-07-11 16:50:52,232 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,232 - calculation - INFO - test_data_row_index: 11
-2023-07-11 16:50:52,232 - calculation - INFO - x_value: -15.8
-2023-07-11 16:50:52,232 - calculation - INFO - y_value: -1.1628026
-2023-07-11 16:50:52,232 - calculation - INFO - y_value to find from x = -18.9
-2023-07-11 16:50:52,232 - calculation - INFO - column : y36 --> position_in_column: 42 --> y_value: 79.0
-2023-07-11 16:50:52,232 - calculation - INFO - x value is -15.8, calculation of deviation ...
-2023-07-11 16:50:52,233 - calculation - INFO - Result: 79.0 - (-1.1628026) = 80.1628026
-2023-07-11 16:50:52,233 - calculation - INFO - ############
-2023-07-11 16:50:52,233 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,233 - calculation - INFO - test_data_row_index: 12
-2023-07-11 16:50:52,233 - calculation - INFO - x_value: -15.3
-2023-07-11 16:50:52,233 - calculation - INFO - y_value: 0.21437874
-2023-07-11 16:50:52,233 - calculation - INFO - y_value to find from x = -18.8
-2023-07-11 16:50:52,233 - calculation - INFO - column : y36 --> position_in_column: 47 --> y_value: 76.5
-2023-07-11 16:50:52,233 - calculation - INFO - x value is -15.3, calculation of deviation ...
-2023-07-11 16:50:52,233 - calculation - INFO - Result: 76.5 - (0.21437874) = 76.28562126
-2023-07-11 16:50:52,233 - calculation - INFO - ############
-2023-07-11 16:50:52,233 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,233 - calculation - INFO - test_data_row_index: 13
-2023-07-11 16:50:52,234 - calculation - INFO - x_value: -15.1
-2023-07-11 16:50:52,234 - calculation - INFO - y_value: -0.8285563
-2023-07-11 16:50:52,234 - calculation - INFO - y_value to find from x = -18.7
-2023-07-11 16:50:52,234 - calculation - INFO - column : y36 --> position_in_column: 49 --> y_value: 75.5
-2023-07-11 16:50:52,234 - calculation - INFO - x value is -15.1, calculation of deviation ...
-2023-07-11 16:50:52,234 - calculation - INFO - Result: 75.5 - (-0.8285563) = 76.3285563
-2023-07-11 16:50:52,234 - calculation - INFO - ############
-2023-07-11 16:50:52,234 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,234 - calculation - INFO - test_data_row_index: 14
-2023-07-11 16:50:52,234 - calculation - INFO - x_value: -15.1
-2023-07-11 16:50:52,234 - calculation - INFO - y_value: 14.192294
-2023-07-11 16:50:52,234 - calculation - INFO - y_value to find from x = -18.6
-2023-07-11 16:50:52,235 - calculation - INFO - column : y36 --> position_in_column: 49 --> y_value: 75.5
-2023-07-11 16:50:52,235 - calculation - INFO - x value is -15.1, calculation of deviation ...
-2023-07-11 16:50:52,235 - calculation - INFO - Result: 75.5 - (14.192294) = 61.307705999999996
-2023-07-11 16:50:52,235 - calculation - INFO - ############
-2023-07-11 16:50:52,235 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,235 - calculation - INFO - test_data_row_index: 15
-2023-07-11 16:50:52,235 - calculation - INFO - x_value: -14.2
-2023-07-11 16:50:52,235 - calculation - INFO - y_value: 15.1473255
-2023-07-11 16:50:52,235 - calculation - INFO - y_value to find from x = -18.5
-2023-07-11 16:50:52,235 - calculation - INFO - column : y36 --> position_in_column: 58 --> y_value: 71.0
-2023-07-11 16:50:52,235 - calculation - INFO - x value is -14.2, calculation of deviation ...
-2023-07-11 16:50:52,235 - calculation - INFO - Result: 71.0 - (15.1473255) = 55.8526745
-2023-07-11 16:50:52,235 - calculation - INFO - ############
-2023-07-11 16:50:52,235 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,235 - calculation - INFO - test_data_row_index: 16
-2023-07-11 16:50:52,236 - calculation - INFO - x_value: -13.8
-2023-07-11 16:50:52,236 - calculation - INFO - y_value: 44.641987
-2023-07-11 16:50:52,236 - calculation - INFO - y_value to find from x = -18.4
-2023-07-11 16:50:52,236 - calculation - INFO - column : y36 --> position_in_column: 62 --> y_value: 69.0
-2023-07-11 16:50:52,236 - calculation - INFO - x value is -13.8, calculation of deviation ...
-2023-07-11 16:50:52,236 - calculation - INFO - Result: 69.0 - (44.641987) = 24.358013
-2023-07-11 16:50:52,236 - calculation - INFO - ############
-2023-07-11 16:50:52,236 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,236 - calculation - INFO - test_data_row_index: 17
-2023-07-11 16:50:52,236 - calculation - INFO - x_value: -13.8
-2023-07-11 16:50:52,236 - calculation - INFO - y_value: 14.865583
-2023-07-11 16:50:52,236 - calculation - INFO - y_value to find from x = -18.3
-2023-07-11 16:50:52,236 - calculation - INFO - column : y36 --> position_in_column: 62 --> y_value: 69.0
-2023-07-11 16:50:52,237 - calculation - INFO - x value is -13.8, calculation of deviation ...
-2023-07-11 16:50:52,237 - calculation - INFO - Result: 69.0 - (14.865583) = 54.134417
-2023-07-11 16:50:52,237 - calculation - INFO - ############
-2023-07-11 16:50:52,237 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,237 - calculation - INFO - test_data_row_index: 18
-2023-07-11 16:50:52,237 - calculation - INFO - x_value: -12.6
-2023-07-11 16:50:52,237 - calculation - INFO - y_value: -0.080303125
-2023-07-11 16:50:52,237 - calculation - INFO - y_value to find from x = -18.2
-2023-07-11 16:50:52,237 - calculation - INFO - column : y36 --> position_in_column: 74 --> y_value: 63.0
-2023-07-11 16:50:52,237 - calculation - INFO - x value is -12.6, calculation of deviation ...
-2023-07-11 16:50:52,237 - calculation - INFO - Result: 63.0 - (-0.080303125) = 63.080303125
-2023-07-11 16:50:52,237 - calculation - INFO - ############
-2023-07-11 16:50:52,237 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,237 - calculation - INFO - test_data_row_index: 19
-2023-07-11 16:50:52,238 - calculation - INFO - x_value: -11.7
-2023-07-11 16:50:52,238 - calculation - INFO - y_value: -0.14251386
-2023-07-11 16:50:52,238 - calculation - INFO - y_value to find from x = -18.1
-2023-07-11 16:50:52,238 - calculation - INFO - column : y36 --> position_in_column: 83 --> y_value: 58.5
-2023-07-11 16:50:52,238 - calculation - INFO - x value is -11.7, calculation of deviation ...
-2023-07-11 16:50:52,238 - calculation - INFO - Result: 58.5 - (-0.14251386) = 58.64251386
-2023-07-11 16:50:52,238 - calculation - INFO - ############
-2023-07-11 16:50:52,238 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,238 - calculation - INFO - test_data_row_index: 20
-2023-07-11 16:50:52,238 - calculation - INFO - x_value: -11.5
-2023-07-11 16:50:52,238 - calculation - INFO - y_value: -0.47237664
-2023-07-11 16:50:52,238 - calculation - INFO - y_value to find from x = -18.0
-2023-07-11 16:50:52,238 - calculation - INFO - column : y36 --> position_in_column: 85 --> y_value: 57.5
-2023-07-11 16:50:52,238 - calculation - INFO - x value is -11.5, calculation of deviation ...
-2023-07-11 16:50:52,238 - calculation - INFO - Result: 57.5 - (-0.47237664) = 57.97237664
-2023-07-11 16:50:52,239 - calculation - INFO - ############
-2023-07-11 16:50:52,239 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,239 - calculation - INFO - test_data_row_index: 21
-2023-07-11 16:50:52,239 - calculation - INFO - x_value: -11.4
-2023-07-11 16:50:52,239 - calculation - INFO - y_value: 10.554388
-2023-07-11 16:50:52,239 - calculation - INFO - y_value to find from x = -17.9
-2023-07-11 16:50:52,239 - calculation - INFO - column : y36 --> position_in_column: 86 --> y_value: 57.0
-2023-07-11 16:50:52,239 - calculation - INFO - x value is -11.4, calculation of deviation ...
-2023-07-11 16:50:52,239 - calculation - INFO - Result: 57.0 - (10.554388) = 46.445612
-2023-07-11 16:50:52,239 - calculation - INFO - ############
-2023-07-11 16:50:52,239 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,239 - calculation - INFO - test_data_row_index: 22
-2023-07-11 16:50:52,239 - calculation - INFO - x_value: -11.1
-2023-07-11 16:50:52,239 - calculation - INFO - y_value: -11.129228
-2023-07-11 16:50:52,239 - calculation - INFO - y_value to find from x = -17.8
-2023-07-11 16:50:52,240 - calculation - INFO - column : y36 --> position_in_column: 89 --> y_value: 55.5
-2023-07-11 16:50:52,240 - calculation - INFO - x value is -11.1, calculation of deviation ...
-2023-07-11 16:50:52,240 - calculation - INFO - Result: 55.5 - (-11.129228) = 66.629228
-2023-07-11 16:50:52,240 - calculation - INFO - ############
-2023-07-11 16:50:52,240 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,240 - calculation - INFO - test_data_row_index: 23
-2023-07-11 16:50:52,240 - calculation - INFO - x_value: -10.7
-2023-07-11 16:50:52,240 - calculation - INFO - y_value: 0.73965573
-2023-07-11 16:50:52,240 - calculation - INFO - y_value to find from x = -17.7
-2023-07-11 16:50:52,240 - calculation - INFO - column : y36 --> position_in_column: 93 --> y_value: 53.5
-2023-07-11 16:50:52,240 - calculation - INFO - x value is -10.7, calculation of deviation ...
-2023-07-11 16:50:52,240 - calculation - INFO - Result: 53.5 - (0.73965573) = 52.76034427
-2023-07-11 16:50:52,240 - calculation - INFO - ############
-2023-07-11 16:50:52,240 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,241 - calculation - INFO - test_data_row_index: 24
-2023-07-11 16:50:52,241 - calculation - INFO - x_value: -10.1
-2023-07-11 16:50:52,241 - calculation - INFO - y_value: 55.911495
-2023-07-11 16:50:52,241 - calculation - INFO - y_value to find from x = -17.6
-2023-07-11 16:50:52,241 - calculation - INFO - column : y36 --> position_in_column: 99 --> y_value: 50.5
-2023-07-11 16:50:52,241 - calculation - INFO - x value is -10.1, calculation of deviation ...
-2023-07-11 16:50:52,241 - calculation - INFO - Result: 50.5 - (55.911495) = -5.411495000000002
-2023-07-11 16:50:52,241 - calculation - INFO - ############
-2023-07-11 16:50:52,241 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,241 - calculation - INFO - test_data_row_index: 25
-2023-07-11 16:50:52,241 - calculation - INFO - x_value: -9.1
-2023-07-11 16:50:52,241 - calculation - INFO - y_value: -1.1680479
-2023-07-11 16:50:52,241 - calculation - INFO - y_value to find from x = -17.5
-2023-07-11 16:50:52,241 - calculation - INFO - column : y36 --> position_in_column: 109 --> y_value: 45.5
-2023-07-11 16:50:52,241 - calculation - INFO - x value is -9.1, calculation of deviation ...
-2023-07-11 16:50:52,242 - calculation - INFO - Result: 45.5 - (-1.1680479) = 46.6680479
-2023-07-11 16:50:52,242 - calculation - INFO - ############
-2023-07-11 16:50:52,242 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,242 - calculation - INFO - test_data_row_index: 26
-2023-07-11 16:50:52,242 - calculation - INFO - x_value: -8.1
-2023-07-11 16:50:52,242 - calculation - INFO - y_value: 2.8754423
-2023-07-11 16:50:52,242 - calculation - INFO - y_value to find from x = -17.4
-2023-07-11 16:50:52,242 - calculation - INFO - column : y36 --> position_in_column: 119 --> y_value: 40.5
-2023-07-11 16:50:52,242 - calculation - INFO - x value is -8.1, calculation of deviation ...
-2023-07-11 16:50:52,242 - calculation - INFO - Result: 40.5 - (2.8754423) = 37.6245577
-2023-07-11 16:50:52,242 - calculation - INFO - ############
-2023-07-11 16:50:52,242 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,242 - calculation - INFO - test_data_row_index: 27
-2023-07-11 16:50:52,242 - calculation - INFO - x_value: -8.1
-2023-07-11 16:50:52,242 - calculation - INFO - y_value: 41.723595
-2023-07-11 16:50:52,242 - calculation - INFO - y_value to find from x = -17.3
-2023-07-11 16:50:52,243 - calculation - INFO - column : y36 --> position_in_column: 119 --> y_value: 40.5
-2023-07-11 16:50:52,243 - calculation - INFO - x value is -8.1, calculation of deviation ...
-2023-07-11 16:50:52,243 - calculation - INFO - Result: 40.5 - (41.723595) = -1.223595000000003
-2023-07-11 16:50:52,243 - calculation - INFO - ############
-2023-07-11 16:50:52,243 - calculation - INFO - Column best: y36
-2023-07-11 16:50:52,243 - calculation - INFO - test_data_row_index: 28
-2023-07-11 16:50:52,243 - calculation - INFO - x_value: -7.8
-2023-07-11 16:50:52,243 - calculation - INFO - y_value: 9.451261
-2023-07-11 16:50:52,243 - calculation - INFO - y_value to find from x = -17.2
+2023-07-11 17:09:49,315 - main - INFO - Create training table
+2023-07-11 17:09:49,317 - main - INFO - Create ideal table
+2023-07-11 17:09:49,321 - main - INFO - Create sorted test table
+2023-07-11 17:09:49,322 - database - INFO - Database created object
+2023-07-11 17:09:49,322 - database - INFO - Connection string created
+2023-07-11 17:09:49,345 - database - INFO - Engine object created
+2023-07-11 17:09:49,352 - database - INFO - Databank connection object created
+2023-07-11 17:09:49,352 - database - INFO - Meta data object created
+2023-07-11 17:09:49,352 - database - INFO - Create table from dataframe: train.csv
+2023-07-11 17:09:49,390 - database - INFO - Create table from dataframe: ideal.csv
+2023-07-11 17:09:49,486 - database - INFO - Create table from dataframe: test.csv
+2023-07-11 17:09:49,499 - database - INFO - Create table from dataframe: sorted_test.csv
+2023-07-11 17:09:49,512 - visualization - INFO - source-dataframe: train.csv
+2023-07-11 17:09:49,640 - visualization - INFO - Show plot: train.csv
+2023-07-11 17:09:55,032 - calculation - INFO - Calculation created object
+2023-07-11 17:09:55,032 - calculation - INFO - rows = 400
+2023-07-11 17:09:55,032 - calculation - INFO - columns_train_data = 4
+2023-07-11 17:09:55,032 - calculation - INFO - columns_ideal_data = 50
+2023-07-11 17:09:55,032 - calculation - INFO - ### train-function: y1 ###
+2023-07-11 17:09:55,078 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
+2023-07-11 17:09:55,078 - calculation - INFO - ### train-function: y2 ###
+2023-07-11 17:09:55,115 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
+2023-07-11 17:09:55,116 - calculation - INFO - ### train-function: y3 ###
+2023-07-11 17:09:55,151 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
+2023-07-11 17:09:55,151 - calculation - INFO - ### train-function: y4 ###
+2023-07-11 17:09:55,188 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
+2023-07-11 17:09:55,188 - main - INFO - Create calculation result table
+2023-07-11 17:09:55,189 - database - INFO - Create table from dataframe: best_fits_result
+2023-07-11 17:09:55,207 - database - INFO - Create table for bestfits
+2023-07-11 17:09:55,209 - database - INFO - Create table from dataframe: bestfits
+2023-07-11 17:09:55,235 - visualization - INFO - source-dataframe: train.csv
+2023-07-11 17:09:55,236 - visualization - INFO - selector-dataframe: bestfits
+2023-07-11 17:09:55,236 - visualization - INFO - Create plot from selection
+2023-07-11 17:09:55,250 - visualization - INFO - Create plot source dataframe
+2023-07-11 17:09:55,263 - visualization - INFO - Create plot selector dataframe
+2023-07-11 17:09:55,270 - visualization - INFO - Show plot: best-fits
+2023-07-11 17:09:55,538 - calculation - INFO - Validation calculation
+2023-07-11 17:09:55,538 - calculation - INFO - Get column values from best_fits_data and corresponding test_data
+2023-07-11 17:09:55,538 - calculation - INFO - ############
+2023-07-11 17:09:55,538 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,538 - calculation - INFO - test_data_row_index: 0
+2023-07-11 17:09:55,538 - calculation - INFO - x_value: -20.0
+2023-07-11 17:09:55,538 - calculation - INFO - y_value: -19.347134
+2023-07-11 17:09:55,538 - calculation - INFO - y_value to find from x = -20.0
+2023-07-11 17:09:55,539 - calculation - INFO - column : y36 --> position_in_column: 0 --> y_value: 100.0
+2023-07-11 17:09:55,539 - calculation - INFO - x value is -20.0, calculation of deviation ...
+2023-07-11 17:09:55,539 - calculation - INFO - Result: 100.0 - (-19.347134) = 119.347134
+2023-07-11 17:09:55,539 - calculation - INFO - ############
+2023-07-11 17:09:55,539 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,539 - calculation - INFO - test_data_row_index: 1
+2023-07-11 17:09:55,539 - calculation - INFO - x_value: -20.0
+2023-07-11 17:09:55,539 - calculation - INFO - y_value: 99.261604
+2023-07-11 17:09:55,539 - calculation - INFO - y_value to find from x = -20.0
+2023-07-11 17:09:55,539 - calculation - INFO - column : y36 --> position_in_column: 0 --> y_value: 100.0
+2023-07-11 17:09:55,539 - calculation - INFO - x value is -20.0, calculation of deviation ...
+2023-07-11 17:09:55,539 - calculation - INFO - Result: 100.0 - (99.261604) = 0.7383959999999945
+2023-07-11 17:09:55,539 - calculation - INFO - ############
+2023-07-11 17:09:55,539 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,539 - calculation - INFO - test_data_row_index: 2
+2023-07-11 17:09:55,540 - calculation - INFO - x_value: -18.1
+2023-07-11 17:09:55,540 - calculation - INFO - y_value: 35.745747
+2023-07-11 17:09:55,540 - calculation - INFO - y_value to find from x = -18.1
+2023-07-11 17:09:55,540 - calculation - INFO - column : y36 --> position_in_column: 19 --> y_value: 90.5
+2023-07-11 17:09:55,540 - calculation - INFO - x value is -18.1, calculation of deviation ...
+2023-07-11 17:09:55,540 - calculation - INFO - Result: 90.5 - (35.745747) = 54.754253
+2023-07-11 17:09:55,540 - calculation - INFO - ############
+2023-07-11 17:09:55,540 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,540 - calculation - INFO - test_data_row_index: 3
+2023-07-11 17:09:55,540 - calculation - INFO - x_value: -17.5
+2023-07-11 17:09:55,540 - calculation - INFO - y_value: 16.389914
+2023-07-11 17:09:55,540 - calculation - INFO - y_value to find from x = -17.5
+2023-07-11 17:09:55,540 - calculation - INFO - column : y36 --> position_in_column: 25 --> y_value: 87.5
+2023-07-11 17:09:55,540 - calculation - INFO - x value is -17.5, calculation of deviation ...
+2023-07-11 17:09:55,541 - calculation - INFO - Result: 87.5 - (16.389914) = 71.110086
+2023-07-11 17:09:55,541 - calculation - INFO - ############
+2023-07-11 17:09:55,541 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,541 - calculation - INFO - test_data_row_index: 4
+2023-07-11 17:09:55,541 - calculation - INFO - x_value: -17.4
+2023-07-11 17:09:55,541 - calculation - INFO - y_value: 16.13856
+2023-07-11 17:09:55,541 - calculation - INFO - y_value to find from x = -17.4
+2023-07-11 17:09:55,541 - calculation - INFO - column : y36 --> position_in_column: 26 --> y_value: 87.0
+2023-07-11 17:09:55,541 - calculation - INFO - x value is -17.4, calculation of deviation ...
+2023-07-11 17:09:55,541 - calculation - INFO - Result: 87.0 - (16.13856) = 70.86144
+2023-07-11 17:09:55,541 - calculation - INFO - ############
+2023-07-11 17:09:55,541 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,541 - calculation - INFO - test_data_row_index: 5
+2023-07-11 17:09:55,541 - calculation - INFO - x_value: -17.1
+2023-07-11 17:09:55,541 - calculation - INFO - y_value: 15.988693
+2023-07-11 17:09:55,541 - calculation - INFO - y_value to find from x = -17.1
+2023-07-11 17:09:55,542 - calculation - INFO - column : y36 --> position_in_column: 29 --> y_value: 85.5
+2023-07-11 17:09:55,542 - calculation - INFO - x value is -17.1, calculation of deviation ...
+2023-07-11 17:09:55,542 - calculation - INFO - Result: 85.5 - (15.988693) = 69.511307
+2023-07-11 17:09:55,542 - calculation - INFO - ############
+2023-07-11 17:09:55,542 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,542 - calculation - INFO - test_data_row_index: 6
+2023-07-11 17:09:55,542 - calculation - INFO - x_value: -16.7
+2023-07-11 17:09:55,542 - calculation - INFO - y_value: 16.142563
+2023-07-11 17:09:55,542 - calculation - INFO - y_value to find from x = -16.7
+2023-07-11 17:09:55,542 - calculation - INFO - column : y36 --> position_in_column: 33 --> y_value: 83.5
+2023-07-11 17:09:55,542 - calculation - INFO - x value is -16.7, calculation of deviation ...
+2023-07-11 17:09:55,542 - calculation - INFO - Result: 83.5 - (16.142563) = 67.357437
+2023-07-11 17:09:55,542 - calculation - INFO - ############
+2023-07-11 17:09:55,542 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,543 - calculation - INFO - test_data_row_index: 7
+2023-07-11 17:09:55,543 - calculation - INFO - x_value: -16.6
+2023-07-11 17:09:55,543 - calculation - INFO - y_value: -1.8238432
+2023-07-11 17:09:55,543 - calculation - INFO - y_value to find from x = -16.6
+2023-07-11 17:09:55,543 - calculation - INFO - column : y36 --> position_in_column: 34 --> y_value: 83.0
+2023-07-11 17:09:55,543 - calculation - INFO - x value is -16.6, calculation of deviation ...
+2023-07-11 17:09:55,543 - calculation - INFO - Result: 83.0 - (-1.8238432) = 84.8238432
+2023-07-11 17:09:55,543 - calculation - INFO - ############
+2023-07-11 17:09:55,543 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,543 - calculation - INFO - test_data_row_index: 8
+2023-07-11 17:09:55,543 - calculation - INFO - x_value: -16.5
+2023-07-11 17:09:55,543 - calculation - INFO - y_value: 0.4701114
+2023-07-11 17:09:55,543 - calculation - INFO - y_value to find from x = -16.5
+2023-07-11 17:09:55,543 - calculation - INFO - column : y36 --> position_in_column: 35 --> y_value: 82.5
+2023-07-11 17:09:55,544 - calculation - INFO - x value is -16.5, calculation of deviation ...
+2023-07-11 17:09:55,544 - calculation - INFO - Result: 82.5 - (0.4701114) = 82.0298886
+2023-07-11 17:09:55,544 - calculation - INFO - ############
+2023-07-11 17:09:55,544 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,544 - calculation - INFO - test_data_row_index: 9
+2023-07-11 17:09:55,544 - calculation - INFO - x_value: -16.2
+2023-07-11 17:09:55,544 - calculation - INFO - y_value: 80.32605
+2023-07-11 17:09:55,544 - calculation - INFO - y_value to find from x = -16.2
+2023-07-11 17:09:55,544 - calculation - INFO - column : y36 --> position_in_column: 38 --> y_value: 81.0
+2023-07-11 17:09:55,544 - calculation - INFO - x value is -16.2, calculation of deviation ...
+2023-07-11 17:09:55,544 - calculation - INFO - Result: 81.0 - (80.32605) = 0.6739500000000049
+2023-07-11 17:09:55,544 - calculation - INFO - ############
+2023-07-11 17:09:55,544 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,544 - calculation - INFO - test_data_row_index: 10
+2023-07-11 17:09:55,544 - calculation - INFO - x_value: -16.2
+2023-07-11 17:09:55,544 - calculation - INFO - y_value: -0.62903035
+2023-07-11 17:09:55,544 - calculation - INFO - y_value to find from x = -16.2
+2023-07-11 17:09:55,544 - calculation - INFO - column : y36 --> position_in_column: 38 --> y_value: 81.0
+2023-07-11 17:09:55,545 - calculation - INFO - x value is -16.2, calculation of deviation ...
+2023-07-11 17:09:55,545 - calculation - INFO - Result: 81.0 - (-0.62903035) = 81.62903035
+2023-07-11 17:09:55,545 - calculation - INFO - ############
+2023-07-11 17:09:55,545 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,545 - calculation - INFO - test_data_row_index: 11
+2023-07-11 17:09:55,545 - calculation - INFO - x_value: -15.8
+2023-07-11 17:09:55,545 - calculation - INFO - y_value: -1.1628026
+2023-07-11 17:09:55,545 - calculation - INFO - y_value to find from x = -15.8
+2023-07-11 17:09:55,545 - calculation - INFO - column : y36 --> position_in_column: 42 --> y_value: 79.0
+2023-07-11 17:09:55,545 - calculation - INFO - x value is -15.8, calculation of deviation ...
+2023-07-11 17:09:55,545 - calculation - INFO - Result: 79.0 - (-1.1628026) = 80.1628026
+2023-07-11 17:09:55,545 - calculation - INFO - ############
+2023-07-11 17:09:55,545 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,545 - calculation - INFO - test_data_row_index: 12
+2023-07-11 17:09:55,545 - calculation - INFO - x_value: -15.3
+2023-07-11 17:09:55,545 - calculation - INFO - y_value: 0.21437874
+2023-07-11 17:09:55,545 - calculation - INFO - y_value to find from x = -15.3
+2023-07-11 17:09:55,545 - calculation - INFO - column : y36 --> position_in_column: 47 --> y_value: 76.5
+2023-07-11 17:09:55,546 - calculation - INFO - x value is -15.3, calculation of deviation ...
+2023-07-11 17:09:55,546 - calculation - INFO - Result: 76.5 - (0.21437874) = 76.28562126
+2023-07-11 17:09:55,546 - calculation - INFO - ############
+2023-07-11 17:09:55,546 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,546 - calculation - INFO - test_data_row_index: 13
+2023-07-11 17:09:55,546 - calculation - INFO - x_value: -15.1
+2023-07-11 17:09:55,546 - calculation - INFO - y_value: -0.8285563
+2023-07-11 17:09:55,546 - calculation - INFO - y_value to find from x = -15.1
+2023-07-11 17:09:55,546 - calculation - INFO - column : y36 --> position_in_column: 49 --> y_value: 75.5
+2023-07-11 17:09:55,546 - calculation - INFO - x value is -15.1, calculation of deviation ...
+2023-07-11 17:09:55,546 - calculation - INFO - Result: 75.5 - (-0.8285563) = 76.3285563
+2023-07-11 17:09:55,546 - calculation - INFO - ############
+2023-07-11 17:09:55,546 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,546 - calculation - INFO - test_data_row_index: 14
+2023-07-11 17:09:55,546 - calculation - INFO - x_value: -15.1
+2023-07-11 17:09:55,546 - calculation - INFO - y_value: 14.192294
+2023-07-11 17:09:55,546 - calculation - INFO - y_value to find from x = -15.1
+2023-07-11 17:09:55,547 - calculation - INFO - column : y36 --> position_in_column: 49 --> y_value: 75.5
+2023-07-11 17:09:55,547 - calculation - INFO - x value is -15.1, calculation of deviation ...
+2023-07-11 17:09:55,547 - calculation - INFO - Result: 75.5 - (14.192294) = 61.307705999999996
+2023-07-11 17:09:55,547 - calculation - INFO - ############
+2023-07-11 17:09:55,547 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,547 - calculation - INFO - test_data_row_index: 15
+2023-07-11 17:09:55,547 - calculation - INFO - x_value: -14.2
+2023-07-11 17:09:55,547 - calculation - INFO - y_value: 15.1473255
+2023-07-11 17:09:55,547 - calculation - INFO - y_value to find from x = -14.2
+2023-07-11 17:09:55,547 - calculation - INFO - column : y36 --> position_in_column: 58 --> y_value: 71.0
+2023-07-11 17:09:55,547 - calculation - INFO - x value is -14.2, calculation of deviation ...
+2023-07-11 17:09:55,547 - calculation - INFO - Result: 71.0 - (15.1473255) = 55.8526745
+2023-07-11 17:09:55,547 - calculation - INFO - ############
+2023-07-11 17:09:55,547 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,547 - calculation - INFO - test_data_row_index: 16
+2023-07-11 17:09:55,547 - calculation - INFO - x_value: -13.8
+2023-07-11 17:09:55,547 - calculation - INFO - y_value: 44.641987
+2023-07-11 17:09:55,547 - calculation - INFO - y_value to find from x = -13.8
+2023-07-11 17:09:55,548 - calculation - INFO - column : y36 --> position_in_column: 62 --> y_value: 69.0
+2023-07-11 17:09:55,548 - calculation - INFO - x value is -13.8, calculation of deviation ...
+2023-07-11 17:09:55,548 - calculation - INFO - Result: 69.0 - (44.641987) = 24.358013
+2023-07-11 17:09:55,548 - calculation - INFO - ############
+2023-07-11 17:09:55,548 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,548 - calculation - INFO - test_data_row_index: 17
+2023-07-11 17:09:55,548 - calculation - INFO - x_value: -13.8
+2023-07-11 17:09:55,548 - calculation - INFO - y_value: 14.865583
+2023-07-11 17:09:55,548 - calculation - INFO - y_value to find from x = -13.8
+2023-07-11 17:09:55,548 - calculation - INFO - column : y36 --> position_in_column: 62 --> y_value: 69.0
+2023-07-11 17:09:55,548 - calculation - INFO - x value is -13.8, calculation of deviation ...
+2023-07-11 17:09:55,548 - calculation - INFO - Result: 69.0 - (14.865583) = 54.134417
+2023-07-11 17:09:55,548 - calculation - INFO - ############
+2023-07-11 17:09:55,548 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,548 - calculation - INFO - test_data_row_index: 18
+2023-07-11 17:09:55,548 - calculation - INFO - x_value: -12.6
+2023-07-11 17:09:55,548 - calculation - INFO - y_value: -0.080303125
+2023-07-11 17:09:55,548 - calculation - INFO - y_value to find from x = -12.6
+2023-07-11 17:09:55,549 - calculation - INFO - column : y36 --> position_in_column: 74 --> y_value: 63.0
+2023-07-11 17:09:55,549 - calculation - INFO - x value is -12.6, calculation of deviation ...
+2023-07-11 17:09:55,549 - calculation - INFO - Result: 63.0 - (-0.080303125) = 63.080303125
+2023-07-11 17:09:55,549 - calculation - INFO - ############
+2023-07-11 17:09:55,549 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,549 - calculation - INFO - test_data_row_index: 19
+2023-07-11 17:09:55,549 - calculation - INFO - x_value: -11.7
+2023-07-11 17:09:55,549 - calculation - INFO - y_value: -0.14251386
+2023-07-11 17:09:55,549 - calculation - INFO - y_value to find from x = -11.7
+2023-07-11 17:09:55,549 - calculation - INFO - column : y36 --> position_in_column: 83 --> y_value: 58.5
+2023-07-11 17:09:55,549 - calculation - INFO - x value is -11.7, calculation of deviation ...
+2023-07-11 17:09:55,549 - calculation - INFO - Result: 58.5 - (-0.14251386) = 58.64251386
+2023-07-11 17:09:55,549 - calculation - INFO - ############
+2023-07-11 17:09:55,549 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,549 - calculation - INFO - test_data_row_index: 20
+2023-07-11 17:09:55,549 - calculation - INFO - x_value: -11.5
+2023-07-11 17:09:55,549 - calculation - INFO - y_value: -0.47237664
+2023-07-11 17:09:55,549 - calculation - INFO - y_value to find from x = -11.5
+2023-07-11 17:09:55,550 - calculation - INFO - column : y36 --> position_in_column: 85 --> y_value: 57.5
+2023-07-11 17:09:55,550 - calculation - INFO - x value is -11.5, calculation of deviation ...
+2023-07-11 17:09:55,550 - calculation - INFO - Result: 57.5 - (-0.47237664) = 57.97237664
+2023-07-11 17:09:55,550 - calculation - INFO - ############
+2023-07-11 17:09:55,550 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,550 - calculation - INFO - test_data_row_index: 21
+2023-07-11 17:09:55,550 - calculation - INFO - x_value: -11.4
+2023-07-11 17:09:55,550 - calculation - INFO - y_value: 10.554388
+2023-07-11 17:09:55,550 - calculation - INFO - y_value to find from x = -11.4
+2023-07-11 17:09:55,550 - calculation - INFO - column : y36 --> position_in_column: 86 --> y_value: 57.0
+2023-07-11 17:09:55,550 - calculation - INFO - x value is -11.4, calculation of deviation ...
+2023-07-11 17:09:55,550 - calculation - INFO - Result: 57.0 - (10.554388) = 46.445612
+2023-07-11 17:09:55,550 - calculation - INFO - ############
+2023-07-11 17:09:55,550 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,550 - calculation - INFO - test_data_row_index: 22
+2023-07-11 17:09:55,550 - calculation - INFO - x_value: -11.1
+2023-07-11 17:09:55,550 - calculation - INFO - y_value: -11.129228
+2023-07-11 17:09:55,550 - calculation - INFO - y_value to find from x = -11.1
+2023-07-11 17:09:55,551 - calculation - INFO - column : y36 --> position_in_column: 89 --> y_value: 55.5
+2023-07-11 17:09:55,551 - calculation - INFO - x value is -11.1, calculation of deviation ...
+2023-07-11 17:09:55,551 - calculation - INFO - Result: 55.5 - (-11.129228) = 66.629228
+2023-07-11 17:09:55,551 - calculation - INFO - ############
+2023-07-11 17:09:55,551 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,551 - calculation - INFO - test_data_row_index: 23
+2023-07-11 17:09:55,551 - calculation - INFO - x_value: -10.7
+2023-07-11 17:09:55,551 - calculation - INFO - y_value: 0.73965573
+2023-07-11 17:09:55,551 - calculation - INFO - y_value to find from x = -10.7
+2023-07-11 17:09:55,551 - calculation - INFO - column : y36 --> position_in_column: 93 --> y_value: 53.5
+2023-07-11 17:09:55,551 - calculation - INFO - x value is -10.7, calculation of deviation ...
+2023-07-11 17:09:55,551 - calculation - INFO - Result: 53.5 - (0.73965573) = 52.76034427
+2023-07-11 17:09:55,551 - calculation - INFO - ############
+2023-07-11 17:09:55,551 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,551 - calculation - INFO - test_data_row_index: 24
+2023-07-11 17:09:55,551 - calculation - INFO - x_value: -10.1
+2023-07-11 17:09:55,551 - calculation - INFO - y_value: 55.911495
+2023-07-11 17:09:55,551 - calculation - INFO - y_value to find from x = -10.1
+2023-07-11 17:09:55,552 - calculation - INFO - column : y36 --> position_in_column: 99 --> y_value: 50.5
+2023-07-11 17:09:55,552 - calculation - INFO - x value is -10.1, calculation of deviation ...
+2023-07-11 17:09:55,552 - calculation - INFO - Result: 50.5 - (55.911495) = -5.411495000000002
+2023-07-11 17:09:55,552 - calculation - INFO - ############
+2023-07-11 17:09:55,552 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,552 - calculation - INFO - test_data_row_index: 25
+2023-07-11 17:09:55,552 - calculation - INFO - x_value: -9.1
+2023-07-11 17:09:55,552 - calculation - INFO - y_value: -1.1680479
+2023-07-11 17:09:55,552 - calculation - INFO - y_value to find from x = -9.1
+2023-07-11 17:09:55,552 - calculation - INFO - column : y36 --> position_in_column: 109 --> y_value: 45.5
+2023-07-11 17:09:55,552 - calculation - INFO - x value is -9.1, calculation of deviation ...
+2023-07-11 17:09:55,552 - calculation - INFO - Result: 45.5 - (-1.1680479) = 46.6680479
+2023-07-11 17:09:55,552 - calculation - INFO - ############
+2023-07-11 17:09:55,552 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,552 - calculation - INFO - test_data_row_index: 26
+2023-07-11 17:09:55,552 - calculation - INFO - x_value: -8.1
+2023-07-11 17:09:55,552 - calculation - INFO - y_value: 2.8754423
+2023-07-11 17:09:55,552 - calculation - INFO - y_value to find from x = -8.1
+2023-07-11 17:09:55,553 - calculation - INFO - column : y36 --> position_in_column: 119 --> y_value: 40.5
+2023-07-11 17:09:55,553 - calculation - INFO - x value is -8.1, calculation of deviation ...
+2023-07-11 17:09:55,553 - calculation - INFO - Result: 40.5 - (2.8754423) = 37.6245577
+2023-07-11 17:09:55,553 - calculation - INFO - ############
+2023-07-11 17:09:55,553 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,553 - calculation - INFO - test_data_row_index: 27
+2023-07-11 17:09:55,553 - calculation - INFO - x_value: -8.1
+2023-07-11 17:09:55,553 - calculation - INFO - y_value: 41.723595
+2023-07-11 17:09:55,553 - calculation - INFO - y_value to find from x = -8.1
+2023-07-11 17:09:55,553 - calculation - INFO - column : y36 --> position_in_column: 119 --> y_value: 40.5
+2023-07-11 17:09:55,553 - calculation - INFO - x value is -8.1, calculation of deviation ...
+2023-07-11 17:09:55,553 - calculation - INFO - Result: 40.5 - (41.723595) = -1.223595000000003
+2023-07-11 17:09:55,553 - calculation - INFO - ############
+2023-07-11 17:09:55,553 - calculation - INFO - Column best: y36
+2023-07-11 17:09:55,553 - calculation - INFO - test_data_row_index: 28
+2023-07-11 17:09:55,553 - calculation - INFO - x_value: -7.8
+2023-07-11 17:09:55,553 - calculation - INFO - y_value: 9.451261
+2023-07-11 17:09:55,553 - calculation - INFO - y_value to find from x = -7.8

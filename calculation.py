@@ -69,7 +69,6 @@ class Calculation:
     # calculation of M
     def max_deviation_best_fits_to_test_data_calculation(self, best_fits_data, test_data):
         result_dict_list = []
-        rows_test_data = len(test_data.index)
 
         logger.info("Get column values from best_fits_data and corresponding test_data")
         for column_best in best_fits_data:
@@ -96,12 +95,12 @@ class Calculation:
                 y_value_test_data = test_data.loc[row, "y"]
                 logger.info("x_value: " + str(x_value_test_data))
                 logger.info("y_value: " + str(y_value_test_data))
-
-                selection = best_fits_data["x"]
-                logger.info("y_value to find from x = " + str(selection[row]))
+                logger.info("y_value to find from x = " + str(x_value_test_data))
 
                 # get index of x_value in the best_fits_Data
+                selection = best_fits_data["x"]
                 position_index = pd.Index(selection).get_loc(x_value_test_data)
+                print(best_fits_data.loc[position_index, "x"])
 
                 # .loc[row, column] = get value of location
                 y_value_best_fits = best_fits_data.loc[position_index, column_best]
