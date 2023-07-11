@@ -1,0 +1,66 @@
+2023-07-11 16:11:22,528 - main - INFO - Create training table
+2023-07-11 16:11:22,530 - main - INFO - Create ideal table
+2023-07-11 16:11:22,535 - main - INFO - Create sorted test table
+2023-07-11 16:11:22,536 - database - INFO - Database created object
+2023-07-11 16:11:22,536 - database - INFO - Connection string created
+2023-07-11 16:11:22,556 - database - INFO - Engine object created
+2023-07-11 16:11:22,563 - database - INFO - Databank connection object created
+2023-07-11 16:11:22,563 - database - INFO - Meta data object created
+2023-07-11 16:11:22,563 - database - INFO - Create table from dataframe: train.csv
+2023-07-11 16:11:22,605 - database - INFO - Create table from dataframe: ideal.csv
+2023-07-11 16:11:22,698 - database - INFO - Create table from dataframe: test.csv
+2023-07-11 16:11:22,713 - database - INFO - Create table from dataframe: sorted_test.csv
+2023-07-11 16:11:22,727 - visualization - INFO - source-dataframe: train.csv
+2023-07-11 16:11:22,856 - visualization - INFO - Show plot: train.csv
+2023-07-11 16:11:24,218 - calculation - INFO - Calculation created object
+2023-07-11 16:11:24,218 - calculation - INFO - rows = 400
+2023-07-11 16:11:24,218 - calculation - INFO - columns_train_data = 4
+2023-07-11 16:11:24,219 - calculation - INFO - columns_ideal_data = 50
+2023-07-11 16:11:24,219 - calculation - INFO - ### train-function: y1 ###
+2023-07-11 16:11:24,256 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
+2023-07-11 16:11:24,256 - calculation - INFO - ### train-function: y2 ###
+2023-07-11 16:11:24,294 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
+2023-07-11 16:11:24,294 - calculation - INFO - ### train-function: y3 ###
+2023-07-11 16:11:24,331 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
+2023-07-11 16:11:24,331 - calculation - INFO - ### train-function: y4 ###
+2023-07-11 16:11:24,370 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
+2023-07-11 16:11:24,370 - main - INFO - Create calculation result table
+2023-07-11 16:11:24,371 - database - INFO - Create table from dataframe: best_fits_result
+2023-07-11 16:11:24,387 - database - INFO - Create table for bestfits
+2023-07-11 16:11:24,389 - database - INFO - Create table from dataframe: bestfits
+2023-07-11 16:11:24,415 - visualization - INFO - source-dataframe: train.csv
+2023-07-11 16:11:24,415 - visualization - INFO - selector-dataframe: bestfits
+2023-07-11 16:11:24,415 - visualization - INFO - Create plot from selection
+2023-07-11 16:11:24,431 - visualization - INFO - Create plot source dataframe
+2023-07-11 16:11:24,445 - visualization - INFO - Create plot selector dataframe
+2023-07-11 16:11:24,452 - visualization - INFO - Show plot: best-fits
+2023-07-11 16:11:26,447 - calculation - INFO - Validation calculation
+2023-07-11 16:11:26,447 - calculation - INFO - Get column values from best_fits_data and corresponding test_data
+2023-07-11 16:11:26,448 - calculation - INFO - no y value found in best_fits for x: -20.0
+2023-07-11 16:11:26,448 - calculation - INFO - no y value found in best_fits for x: -20.0
+2023-07-11 16:11:26,448 - calculation - INFO - no y value found in best_fits for x: -18.1
+2023-07-11 16:11:26,448 - calculation - INFO - no y value found in best_fits for x: -17.5
+2023-07-11 16:11:26,449 - calculation - INFO - no y value found in best_fits for x: -17.4
+2023-07-11 16:11:26,449 - calculation - INFO - no y value found in best_fits for x: -17.1
+2023-07-11 16:11:26,449 - calculation - INFO - no y value found in best_fits for x: -16.7
+2023-07-11 16:11:26,449 - calculation - INFO - no y value found in best_fits for x: -16.6
+2023-07-11 16:11:26,450 - calculation - INFO - no y value found in best_fits for x: -16.5
+2023-07-11 16:11:26,450 - calculation - INFO - no y value found in best_fits for x: -16.2
+2023-07-11 16:11:26,450 - calculation - INFO - no y value found in best_fits for x: -16.2
+2023-07-11 16:11:26,450 - calculation - INFO - no y value found in best_fits for x: -15.8
+2023-07-11 16:11:26,450 - calculation - INFO - no y value found in best_fits for x: -15.3
+2023-07-11 16:11:26,451 - calculation - INFO - no y value found in best_fits for x: -15.1
+2023-07-11 16:11:26,451 - calculation - INFO - no y value found in best_fits for x: -15.1
+2023-07-11 16:11:26,451 - calculation - INFO - no y value found in best_fits for x: -14.2
+2023-07-11 16:11:26,451 - calculation - INFO - no y value found in best_fits for x: -13.8
+2023-07-11 16:11:26,451 - calculation - INFO - no y value found in best_fits for x: -13.8
+2023-07-11 16:11:26,452 - calculation - INFO - no y value found in best_fits for x: -12.6
+2023-07-11 16:11:26,452 - calculation - INFO - no y value found in best_fits for x: -11.7
+2023-07-11 16:11:26,452 - calculation - INFO - no y value found in best_fits for x: -11.5
+2023-07-11 16:11:26,452 - calculation - INFO - no y value found in best_fits for x: -11.4
+2023-07-11 16:11:26,452 - calculation - INFO - no y value found in best_fits for x: -11.1
+2023-07-11 16:11:26,453 - calculation - INFO - no y value found in best_fits for x: -10.7
+2023-07-11 16:11:26,453 - calculation - INFO - no y value found in best_fits for x: -10.1
+2023-07-11 16:11:26,453 - calculation - INFO - no y value found in best_fits for x: -9.1
+2023-07-11 16:11:26,453 - calculation - INFO - no y value found in best_fits for x: -8.1
+2023-07-11 16:11:26,453 - calculation - INFO - no y value found in best_fits for x: -8.1

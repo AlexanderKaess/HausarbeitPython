@@ -1,5 +1,6 @@
 import logging
 import numpy as np
+import pandas as pd
 
 logger = logging.getLogger("HAUSARBEIT")
 
@@ -27,12 +28,11 @@ class Calculation:
         # 4 columns in train_data
         for column_train in range(1, columns_train_data + 1, 1):
             sum_array = 0.0
-            result_dict = {"train_data_y": 0,
+            result_dict = {"train_data_y": column_train,
                            "ideal_data_y": 0,
                            "minimal_deviation_value": 0.0,
                            "minimal_deviation_index": 0}
 
-            result_dict["train_data_y"] = column_train
             logger.info("### train-function: y" + str(column_train) + " ###")
             # 50 columns in ideal_data
             new_sum_array = 100000.0
@@ -70,45 +70,68 @@ class Calculation:
     def max_deviation_best_fits_to_test_data_calculation(self, best_fits_data, test_data):
         result_dict_list = []
         rows_test_data = len(test_data.index)
-        columns_best_fits_data = len(best_fits_data.columns)
 
         logger.info("Get column values from best_fits_data and corresponding test_data")
-        for column_best in range(1, columns_best_fits_data, 1):
+        for column_best in best_fits_data:
+            if column_best == "x":
+                continue
+
+            # --------- remove after testing -------------
+            if  column_best == "y11":
+                break
+
             result_array = 0.0
-            result_dict = {"best_fits_data": 0,
-                           "M": 0,
+            result_dict = {"best_fits_data": column_best,
+                           "M": column_best,
                            "maximal_deviation_value": 0.0,
                            "maximal_deviation_index": 0}
 
-            result_dict["best_fits_data"] = column_best
-            result_dict["M"] = column_best
-
-            for row in range(0, rows_test_data, 1):
+            for row in test_data.index:
+                print("############")
                 print("Column best: " + str(column_best))
+                print("row index: " + str(row))
 
-                # .iloc[row, column]
-                x_test_data_value = test_data.iloc[row, 0]
-                y_test_data_value = test_data.iloc[row, 1]
-                print("value: " + str(x_test_data_value))
-                row_index = best_fits_data["x"] #[x_test_data_value]
-                print(row_index)
+                # .loc[row, column] = get value of location
+                x_value_test_data = test_data.loc[row, "x"]
+                y_value_test_data = test_data.loc[row, "y"]
+                print("x_value: " + str(x_value_test_data))
+                print("y_value: " + str(y_value_test_data))
 
                 # ich brauche den row_index in dem x von test_data gleich x von best_fits_data
+                selection = best_fits_data["x"]
+                print("selection: ")
+                print("y_value: " + str(selection[0]))
+                print("y_value: " + str(selection[1]))
+                print("y_value: " + str(selection[2]))
+                print("y_value: " + str(selection[3]))
+                print("y_value: " + str(selection[4]))
 
-                #y_best_fits_value = best_fits_data.iloc[row_index, column_best]
-                y_best_fits_value = 1.0
+                # get index of x_value in the best_fits_Data
+                position_index = pd.Index(selection).get_loc(x_value_test_data)
+                print("position in best_fits_data: " + str(position_index))
+
+                y_value_best_fits = selection.get(x_value_test_data)
+                print("y_value_best_fits: " + str(y_value_best_fits))
+
+                if y_value_best_fits == None:
+                    logger.info("no y value found in best_fits for x: " + str(x_value_test_data))
+                    continue
+                print("y_value_best_fits: " + str(y_value_best_fits))
+
+                #y_value_best_fits = best_fits_data.loc[row_index, column_best]
+                y_value_best_fits = 1.0
 
                 print("test_data_row_index: " + str(row))
-                print("x: " + str(x_test_data_value))
-                print("y: " + str(y_test_data_value))
+                print("x: " + str(x_value_test_data))
+                print("y: " + str(y_value_test_data))
 
-                print("best_fits_row_index: " + str(row_index))
-                print("y36: " + str(y_best_fits_value))
+                print("best_fits_row_index: " + str(1234567))
+                print("column : " + str(column_best) + str(y_value_best_fits))
 
-                logger.info("x value is " + str(x_test_data_value) + ", calculation of deviation ...")
-                result = np.subtract(y_best_fits_value, y_test_data_value)
-                logger.info("Result: " + str(y_best_fits_value) + " - " +
-                            str("(") + str(y_test_data_value) + str(")") + " = " + str(result))
+                logger.info("x value is " + str(x_value_test_data) + ", calculation of deviation ...")
+                result = np.subtract(y_value_best_fits, y_value_test_data)
+                logger.info("Result: " + str(y_value_best_fits) + " - " +
+                            str("(") + str(y_value_test_data) + str(")") + " = " + str(result))
                 result_array = np.append(result_array, result)
 
             index_to_delete = 0
