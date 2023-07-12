@@ -1,4 +1,6 @@
 import logging
+import math
+
 import numpy as np
 import pandas as pd
 
@@ -169,12 +171,25 @@ class Calculation:
 
     # calculation of M < (sqrt(2)) * N
     def validation_calculation(self, train_data, best_fits_data, test_data):
+        result_dict_list = []
         logger.info("Validation calculation")
         logger.info("#########################################")
 
-        result = 0
+        result_m_list = self.max_deviation_best_fits_to_test_data_calculation(best_fits_data, test_data)
+        result_n_list = self.max_deviation_train_data_to_best_fits_calculation(train_data, best_fits_data)
 
-        result_m = self.max_deviation_best_fits_to_test_data_calculation(best_fits_data, test_data)
-        result_n = self.max_deviation_train_data_to_best_fits_calculation(train_data, best_fits_data)
+        logger.info("Calculation of M < (sqrt(2)) * N")
+        logger.info("#########################################")
 
-        return result
+        for item in range(0, result_m_list.__len__(), 1):
+            m_max_deviation = result_m_list[item].get("maximal_deviation_value")
+            logger.info("max M deviation: " + str(m_max_deviation))
+            n_max_deviation = result_n_list[item].get("maximal_deviation_value")
+            logger.info("max N deviation: " + str(n_max_deviation))
+            n_condition = n_max_deviation * math.sqrt(2)
+            print("sqrt(2)*N = " + str(n_condition))
+
+            if m_max_deviation < n_condition:
+                print("M: " + str(m_max_deviation) + " is smaller than sqrt(2)*N: " + str(n_condition))
+
+        return result_dict_list
