@@ -71,13 +71,11 @@ class Calculation:
         result_dict_list = []
 
         logger.info("Get column values from best_fits_data and corresponding test_data")
+        logger.info("#########################################")
+
         for column_best in best_fits_data:
             if column_best == "x":
                 continue
-
-            # --------- remove after testing -------------
-            if  column_best == "y11":
-                break
 
             result_array = 0.0
             result_dict = {"best_fits_data": column_best,
@@ -86,36 +84,35 @@ class Calculation:
                            "maximal_deviation_index": 0}
 
             for row in test_data.index:
-                logger.info("############")
-                logger.info("Column best: " + str(column_best))
-                logger.info("test_data_row_index: " + str(row))
+                logger.debug("Column best: " + str(column_best))
+                logger.debug("test_data_row_index: " + str(row))
 
                 # .loc[row, column] = get value of location
                 x_value_test_data = test_data.loc[row, "x"]
                 y_value_test_data = test_data.loc[row, "y"]
-                logger.info("x_value: " + str(x_value_test_data))
-                logger.info("y_value: " + str(y_value_test_data))
-                logger.info("y_value to find from x = " + str(x_value_test_data))
+                logger.debug("x_value: " + str(x_value_test_data))
+                logger.debug("y_value: " + str(y_value_test_data))
+                logger.debug("y_value to find from x = " + str(x_value_test_data))
 
                 # get index of x_value in the best_fits_Data
                 selection = best_fits_data["x"]
                 position_index = pd.Index(selection).get_loc(x_value_test_data)
-                print(best_fits_data.loc[position_index, "x"])
 
                 # .loc[row, column] = get value of location
                 y_value_best_fits = best_fits_data.loc[position_index, column_best]
                 if y_value_best_fits is None:
                     logger.info("no y value found in best_fits for x: " + str(x_value_test_data))
                     continue
-                logger.info("column : " + str(column_best) +
+                logger.debug("column : " + str(column_best) +
                             " --> position_in_column: " + str(position_index) +
                             " --> y_value: " + str(y_value_best_fits))
 
-                logger.info("x value is " + str(x_value_test_data) + ", calculation of deviation ...")
+                logger.debug("x value is " + str(x_value_test_data) + ", calculation of deviation ...")
                 result = np.subtract(y_value_best_fits, y_value_test_data)
-                logger.info("Result: " + str(y_value_best_fits) + " - " +
+                logger.debug("Result: " + str(y_value_best_fits) + " - " +
                             str("(") + str(y_value_test_data) + str(")") + " = " + str(result))
                 result_array = np.append(result_array, result)
+                logger.debug("#########################################")
 
             index_to_delete = 0
             new_result_array = np.delete(result_array, index_to_delete)
@@ -135,6 +132,8 @@ class Calculation:
         rows_train_data = len(train_data.index)
 
         logger.info("Get column values from train_data and corresponding best_fits_data")
+        logger.info("#########################################")
+
         for column_train in range(1, columns_train_data, 1):
             result_array = 0.0
             result_dict = {"train_data": 0,
@@ -171,6 +170,8 @@ class Calculation:
     # calculation of M < (sqrt(2)) * N
     def validation_calculation(self, train_data, best_fits_data, test_data):
         logger.info("Validation calculation")
+        logger.info("#########################################")
+
         result = 0
 
         result_m = self.max_deviation_best_fits_to_test_data_calculation(best_fits_data, test_data)

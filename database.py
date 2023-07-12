@@ -35,14 +35,10 @@ class Database:
 
     def create_table(self, table_name):
         logger.info("Create table: " + table_name)
-        table = db.Table(
-            table_name,
-            self.meta_data,
+        table = db.Table(table_name, self.meta_data,
             db.Column("x_test_function", db.Integer, primary_key=True, autoincrement=False, nullable=False),
-            db.Column("y_test_function", db.Integer, nullable=False),
-            db.Column("delta_y", db.Integer, nullable=False),
-            db.Column(table_name, db.Integer, nullable=False)
-        )
+            db.Column("y_test_function", db.Integer, nullable=False), db.Column("delta_y", db.Integer, nullable=False),
+            db.Column(table_name, db.Integer, nullable=False))
         self.meta_data.create_all(self.engine)
 
     def create_table_from_dataframe(self, dataframe_object, table_name):
@@ -51,16 +47,16 @@ class Database:
             return
 
         logger.info("Create table from dataframe: " + table_name)
-        dataframe_object.to_sql(table_name,
-                                con=self.engine,
-                                schema="hausarbeit",
-                                if_exists="replace",
-                                index=False)
+        dataframe_object.to_sql(table_name, con=self.engine, schema="hausarbeit", if_exists="replace", index=False)
 
     def create_table_bestfits(self, ideal_data, calculation_data):
         logger.info("Create table for bestfits")
         result_data = pd.DataFrame()
-        result_data["x"] = np.linspace(-20, 20, 400, endpoint=False)
+        result_data["x"] = np.round(np.linspace(-20, 20, 400, endpoint=False), decimals=1)
+        for r in result_data.index:
+            value = result_data.loc[r, "x"]
+            logger.debug(value)
+
         best_ideal_functions = calculation_data["ideal_data_y"].values
         for bf in best_ideal_functions:
             result_column = "y" + str(bf)
