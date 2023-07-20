@@ -2,13 +2,29 @@ import logging
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib import style
-import pandas
 
 logger = logging.getLogger("HAUSARBEIT")
 
 
 class Visualization:
+    """
+    A class to represent a visualization.
+
+    Methods
+    -------
+    create_plot_from_dataframe:
+        Create a plot from a dataframe
+    create_plot_from_selection:
+        Create a plot from a dataframe with a selection from another dataframe
+    """
+
     def __init__(self, *args):
+        """
+        Constructs all the necessary attributes for the visualization object.
+                Parameters:
+                    source_dataframe (dataframe): source of data to plot
+                    selector_dataframe (dataframe): selection for witch the data is visualized
+        """
         if isinstance(args[0], pd.DataFrame):
             self.source_dataframe = args[0]
             logger.info("source-dataframe: " + self.source_dataframe.name)
@@ -22,6 +38,9 @@ class Visualization:
                 self.selector_dataframe = pd.DataFrame(args[1])
 
     def create_plot_from_dataframe(self):
+        """
+        Create a plot from a dataframe
+        """
         try:
             df = self.source_dataframe
             style.use("ggplot")
@@ -44,6 +63,9 @@ class Visualization:
             logger.info("get an exception at methode create_plot_from_dataframe")
 
     def create_plot_from_selection(self):
+        """
+        Create a plot from a dataframe with a selection from another dataframe
+        """
         logger.info("Create plot from selection")
         df_source = self.source_dataframe
         df_selector = self.selector_dataframe

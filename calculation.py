@@ -8,10 +8,31 @@ logger = logging.getLogger("HAUSARBEIT")
 
 
 class Calculation:
+    """
+    A class to represent a calculation.
+
+    Methods
+    -------
+    least_square_calculation:
+        Calculates the minimal deviation of 2 dataframes
+    max_deviation_best_fits_to_test_data_calculation:
+        Calculates the maximal deviation of best_fits to test_data
+    max_deviation_train_data_to_best_fits_calculation:
+        Calculates the maximal deviation of train_data to best_fits_data
+    """
+
     def __init__(self):
         logger.info("Calculation created object")
 
     def least_square_calculation(self, train_data, ideal_data):
+        """
+        Calculates the minimal deviation of 2 dataframes
+                Parameters:
+                        train_data (dataframe): a pandas dataframe
+                        ideal_data (dataframe): a pandas dataframe
+                Returns:
+                        result_dict_list (list): a list of dictionaries with results of calculation
+        """
         result_dict_list = []
 
         # get number of rows in train_data
@@ -70,6 +91,14 @@ class Calculation:
 
     # calculation of M
     def max_deviation_best_fits_to_test_data_calculation(self, best_fits_data, test_data):
+        """
+        Calculates the maximal deviation of best_fits to test_data
+                Parameters:
+                        best_fits_data (dataframe): a pandas dataframe
+                        test_data (dataframe): a pandas dataframe
+                Returns:
+                        result_dict_list (list): a list of dictionaries with results of calculation
+        """
         result_dict_list = []
 
         logger.info("Get column values from best_fits_data and corresponding test_data")
@@ -105,14 +134,15 @@ class Calculation:
                 if y_value_best_fits is None:
                     logger.info("no y value found in best_fits for x: " + str(x_value_test_data))
                     continue
+
                 logger.debug("column : " + str(column_best) +
-                            " --> position_in_column: " + str(position_index) +
-                            " --> y_value: " + str(y_value_best_fits))
+                             " --> position_in_column: " + str(position_index) +
+                             " --> y_value: " + str(y_value_best_fits))
 
                 logger.debug("x value is " + str(x_value_test_data) + ", calculation of deviation ...")
                 result = np.subtract(y_value_best_fits, y_value_test_data)
                 logger.debug("Result: " + str(y_value_best_fits) + " - " +
-                            str("(") + str(y_value_test_data) + str(")") + " = " + str(result))
+                             str("(") + str(y_value_test_data) + str(")") + " = " + str(result))
                 result_array = np.append(result_array, result)
                 logger.debug("#########################################")
 
@@ -129,6 +159,14 @@ class Calculation:
 
     # calculation of N e.g. N36 = max(train_y1 - best_fits_y36)
     def max_deviation_train_data_to_best_fits_calculation(self, train_data, best_fits_data):
+        """
+        Calculates the maximal deviation of train_data to best_fits_data
+                Parameters:
+                        train_data (dataframe): a pandas dataframe
+                        best_fits_data (dataframe): a pandas dataframe
+                Returns:
+                        result_dict_list (list): a list of dictionaries with results of calculation
+        """
         result_dict_list = []
         columns_train_data = len(train_data.columns)
         rows_train_data = len(train_data.index)
@@ -171,6 +209,15 @@ class Calculation:
 
     # calculation of M < (sqrt(2)) * N
     def validation_calculation(self, train_data, best_fits_data, test_data):
+        """
+        Calculates the validation condition, M < (sqrt(2)) * N
+                Parameters:
+                        train_data (dataframe): a pandas dataframe
+                        best_fits_data (dataframe): a pandas dataframe
+                        test_data (dataframe): a pandas dataframe
+                Returns:
+                        result_dict_list (list): a list of dictionaries with results of calculation
+        """
         result_dict_list = []
         logger.info("Validation calculation")
         logger.info("#########################################")

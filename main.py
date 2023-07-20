@@ -10,7 +10,7 @@ logger = logging.getLogger("HAUSARBEIT")
 
 
 def main():
-    print("### Starting script for data comparison and validation ###")
+    logger.info("### Starting script for data comparison and validation ###")
 
     # create central logging object
     centrallogger.Centrallogger("HAUSARBEIT")
@@ -24,6 +24,7 @@ def main():
     ideal_data = pd.read_csv("./Data/ideal.csv")
     ideal_data.name = "ideal.csv"
 
+    # sort the table test_data ascending
     logger.info("Create sorted test table")
     test_data = pd.read_csv("./Data/test.csv")
     test_data.name = "test.csv"
@@ -42,19 +43,19 @@ def main():
     train_visualization = visualization.Visualization(train_data)
     train_visualization.create_plot_from_dataframe()
 
-    # calcualtion of best fits from train data to ideal data
+    # calculation of best fits from train data to ideal data
     calculation = Calculation()
     calculation_result = calculation.least_square_calculation(train_data, ideal_data)
-    print("")
-    print("calcresult: " + str(calculation_result))
+    logger.info("calcresult: " + str(calculation_result))
 
+    # create table from calculation result
     logger.info("Create calculation result table")
-    calculation_data = pd.DataFrame(calculation_result)
-    calculation_data.name = "best_fits_result"
-    database.create_table_from_dataframe(calculation_data, calculation_data.name)
+    best_fits_result = pd.DataFrame(calculation_result)
+    best_fits_result.name = "best_fits_result"
+    database.create_table_from_dataframe(best_fits_result, best_fits_result.name)
 
-    # get the lines for best_fits
-    best_fits_data = database.create_table_bestfits(ideal_data, calculation_data)
+    # get the lines for best_fits and create table in DB
+    best_fits_data = database.create_table_bestfits(ideal_data, best_fits_result)
     best_fits_data.name = "bestfits"
     database.create_table_from_dataframe(best_fits_data, best_fits_data.name)
 
@@ -62,10 +63,11 @@ def main():
     best_fits_visualization = visualization.Visualization(train_data, best_fits_data)
     best_fits_visualization.create_plot_from_selection()
 
+    # calculation of validation
     validation_result = calculation.validation_calculation(train_data, best_fits_data, sorted_test_data)
-    print("validation_result: " + str(validation_result))
+    logger.info("validation_result: " + str(validation_result))
 
-    print("### Finished script ###")
+    logger.info("### Finished script ###")
 
 
 if __name__ == "__main__":

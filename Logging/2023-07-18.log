@@ -1,54 +1,57 @@
-2023-07-18 14:40:29,984 - main - INFO - Create training table
-2023-07-18 14:40:29,986 - main - INFO - Create ideal table
-2023-07-18 14:40:29,991 - main - INFO - Create sorted test table
-2023-07-18 14:40:29,992 - database - INFO - Database created object
-2023-07-18 14:40:29,992 - database - INFO - Connection string created
-2023-07-18 14:40:30,015 - database - INFO - Engine object created
-2023-07-18 14:40:30,024 - database - INFO - Databank connection object created
-2023-07-18 14:40:30,024 - database - INFO - Meta data object created
-2023-07-18 14:40:30,024 - database - INFO - Create table from dataframe: train.csv
-2023-07-18 14:40:30,064 - database - INFO - Create table from dataframe: ideal.csv
-2023-07-18 14:40:30,154 - database - INFO - Create table from dataframe: test.csv
-2023-07-18 14:40:30,168 - database - INFO - Create table from dataframe: sorted_test.csv
-2023-07-18 14:40:30,181 - visualization - INFO - source-dataframe: train.csv
-2023-07-18 14:40:30,313 - visualization - INFO - Show plot: train.csv
-2023-07-18 14:40:32,208 - calculation - INFO - Calculation created object
-2023-07-18 14:40:32,208 - calculation - INFO - rows = 400
-2023-07-18 14:40:32,208 - calculation - INFO - columns_train_data = 4
-2023-07-18 14:40:32,208 - calculation - INFO - columns_ideal_data = 50
-2023-07-18 14:40:32,208 - calculation - INFO - ### train-function: y1 ###
-2023-07-18 14:40:32,246 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
-2023-07-18 14:40:32,246 - calculation - INFO - ### train-function: y2 ###
-2023-07-18 14:40:32,285 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
-2023-07-18 14:40:32,286 - calculation - INFO - ### train-function: y3 ###
-2023-07-18 14:40:32,326 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
-2023-07-18 14:40:32,326 - calculation - INFO - ### train-function: y4 ###
-2023-07-18 14:40:32,365 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
-2023-07-18 14:40:32,365 - main - INFO - Create calculation result table
-2023-07-18 14:40:32,366 - database - INFO - Create table from dataframe: best_fits_result
-2023-07-18 14:40:32,381 - database - INFO - Create table for bestfits
-2023-07-18 14:40:32,386 - database - INFO - Create table from dataframe: bestfits
-2023-07-18 14:40:32,407 - visualization - INFO - source-dataframe: train.csv
-2023-07-18 14:40:32,407 - visualization - INFO - selector-dataframe: bestfits
-2023-07-18 14:40:32,407 - visualization - INFO - Create plot from selection
-2023-07-18 14:40:32,421 - visualization - INFO - Create plot source dataframe
-2023-07-18 14:40:32,433 - visualization - INFO - Create plot selector dataframe
-2023-07-18 14:40:32,439 - visualization - INFO - Show plot: best-fits
-2023-07-18 14:40:32,931 - calculation - INFO - Validation calculation
-2023-07-18 14:40:32,931 - calculation - INFO - #########################################
-2023-07-18 14:40:32,931 - calculation - INFO - Get column values from best_fits_data and corresponding test_data
-2023-07-18 14:40:32,931 - calculation - INFO - #########################################
-2023-07-18 14:40:32,969 - calculation - INFO - result_dict: [{'best_fits_data': 'y36', 'M': 'y36', 'maximal_deviation_value': 119.347134, 'maximal_deviation_index': 0}, {'best_fits_data': 'y11', 'M': 'y11', 'maximal_deviation_value': 13.0705814, 'maximal_deviation_index': 88}, {'best_fits_data': 'y2', 'M': 'y2', 'maximal_deviation_value': 19.75521607, 'maximal_deviation_index': 0}, {'best_fits_data': 'y33', 'M': 'y33', 'maximal_deviation_value': 39.471744, 'maximal_deviation_index': 0}]
-2023-07-18 14:40:32,969 - calculation - INFO - Get column values from train_data and corresponding best_fits_data
-2023-07-18 14:40:32,969 - calculation - INFO - #########################################
-2023-07-18 14:40:32,978 - calculation - INFO - result_dict: [{'train_data': 'y1', 'best_fits_data': 'y36', 'N': 'y36', 'maximal_deviation_value': 0.4997939999999943, 'maximal_deviation_index': 18}, {'train_data': 'y2', 'best_fits_data': 'y11', 'N': 'y11', 'maximal_deviation_value': 0.49678800000000045, 'maximal_deviation_index': 65}, {'train_data': 'y3', 'best_fits_data': 'y2', 'N': 'y2', 'maximal_deviation_value': 0.49987616, 'maximal_deviation_index': 345}, {'train_data': 'y4', 'best_fits_data': 'y33', 'N': 'y33', 'maximal_deviation_value': 0.4949089999999998, 'maximal_deviation_index': 345}]
-2023-07-18 14:40:32,978 - calculation - INFO - Calculation of M < (sqrt(2)) * N
-2023-07-18 14:40:32,978 - calculation - INFO - #########################################
-2023-07-18 14:40:32,979 - calculation - INFO - max M deviation: 119.347134
-2023-07-18 14:40:32,979 - calculation - INFO - max N deviation: 0.4997939999999943
-2023-07-18 14:40:32,979 - calculation - INFO - max M deviation: 13.0705814
-2023-07-18 14:40:32,979 - calculation - INFO - max N deviation: 0.49678800000000045
-2023-07-18 14:40:32,979 - calculation - INFO - max M deviation: 19.75521607
-2023-07-18 14:40:32,979 - calculation - INFO - max N deviation: 0.49987616
-2023-07-18 14:40:32,979 - calculation - INFO - max M deviation: 39.471744
-2023-07-18 14:40:32,979 - calculation - INFO - max N deviation: 0.4949089999999998
+2023-07-18 18:36:08,096 - main - INFO - Create training table
+2023-07-18 18:36:08,104 - main - INFO - Create ideal table
+2023-07-18 18:36:08,111 - main - INFO - Create sorted test table
+2023-07-18 18:36:08,114 - database - INFO - Database created object
+2023-07-18 18:36:08,114 - database - INFO - Connection string created
+2023-07-18 18:36:08,145 - database - INFO - Engine object created
+2023-07-18 18:36:08,153 - database - INFO - Databank connection object created
+2023-07-18 18:36:08,153 - database - INFO - Meta data object created
+2023-07-18 18:36:08,153 - database - INFO - Create table from dataframe: train.csv
+2023-07-18 18:36:08,196 - database - INFO - Create table from dataframe: ideal.csv
+2023-07-18 18:36:08,299 - database - INFO - Create table from dataframe: test.csv
+2023-07-18 18:36:08,316 - database - INFO - Create table from dataframe: sorted_test.csv
+2023-07-18 18:36:08,330 - visualization - INFO - source-dataframe: train.csv
+2023-07-18 18:36:08,485 - visualization - INFO - Show plot: train.csv
+2023-07-18 18:36:10,858 - calculation - INFO - Calculation created object
+2023-07-18 18:36:10,858 - calculation - INFO - rows = 400
+2023-07-18 18:36:10,858 - calculation - INFO - columns_train_data = 4
+2023-07-18 18:36:10,858 - calculation - INFO - columns_ideal_data = 50
+2023-07-18 18:36:10,858 - calculation - INFO - ### train-function: y1 ###
+2023-07-18 18:36:10,895 - calculation - INFO - ##### result_dict: {'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}
+2023-07-18 18:36:10,895 - calculation - INFO - ### train-function: y2 ###
+2023-07-18 18:36:10,936 - calculation - INFO - ##### result_dict: {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}
+2023-07-18 18:36:10,936 - calculation - INFO - ### train-function: y3 ###
+2023-07-18 18:36:10,973 - calculation - INFO - ##### result_dict: {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}
+2023-07-18 18:36:10,974 - calculation - INFO - ### train-function: y4 ###
+2023-07-18 18:36:11,013 - calculation - INFO - ##### result_dict: {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}
+2023-07-18 18:36:11,013 - main - INFO - calcresult: [{'train_data_y': 1, 'ideal_data_y': 36, 'minimal_deviation_value': 33.71178854422821, 'minimal_deviation_index': 35}, {'train_data_y': 2, 'ideal_data_y': 11, 'minimal_deviation_value': 32.62893138832121, 'minimal_deviation_index': 10}, {'train_data_y': 3, 'ideal_data_y': 2, 'minimal_deviation_value': 33.11847188090256, 'minimal_deviation_index': 1}, {'train_data_y': 4, 'ideal_data_y': 33, 'minimal_deviation_value': 31.75243110139478, 'minimal_deviation_index': 32}]
+2023-07-18 18:36:11,013 - main - INFO - Create calculation result table
+2023-07-18 18:36:11,015 - database - INFO - Create table from dataframe: best_fits_result
+2023-07-18 18:36:11,031 - database - INFO - Create table for bestfits
+2023-07-18 18:36:11,037 - database - INFO - Create table from dataframe: bestfits
+2023-07-18 18:36:11,061 - visualization - INFO - source-dataframe: train.csv
+2023-07-18 18:36:11,061 - visualization - INFO - selector-dataframe: bestfits
+2023-07-18 18:36:11,061 - visualization - INFO - Create plot from selection
+2023-07-18 18:36:11,075 - visualization - INFO - Create plot source dataframe
+2023-07-18 18:36:11,088 - visualization - INFO - Create plot selector dataframe
+2023-07-18 18:36:11,094 - visualization - INFO - Show plot: best-fits
+2023-07-18 18:36:11,700 - calculation - INFO - Validation calculation
+2023-07-18 18:36:11,700 - calculation - INFO - #########################################
+2023-07-18 18:36:11,700 - calculation - INFO - Get column values from best_fits_data and corresponding test_data
+2023-07-18 18:36:11,700 - calculation - INFO - #########################################
+2023-07-18 18:36:11,742 - calculation - INFO - result_dict: [{'best_fits_data': 'y36', 'M': 'y36', 'maximal_deviation_value': 119.347134, 'maximal_deviation_index': 0}, {'best_fits_data': 'y11', 'M': 'y11', 'maximal_deviation_value': 13.0705814, 'maximal_deviation_index': 88}, {'best_fits_data': 'y2', 'M': 'y2', 'maximal_deviation_value': 19.75521607, 'maximal_deviation_index': 0}, {'best_fits_data': 'y33', 'M': 'y33', 'maximal_deviation_value': 39.471744, 'maximal_deviation_index': 0}]
+2023-07-18 18:36:11,742 - calculation - INFO - Get column values from train_data and corresponding best_fits_data
+2023-07-18 18:36:11,742 - calculation - INFO - #########################################
+2023-07-18 18:36:11,752 - calculation - INFO - result_dict: [{'train_data': 'y1', 'best_fits_data': 'y36', 'N': 'y36', 'maximal_deviation_value': 0.4997939999999943, 'maximal_deviation_index': 18}, {'train_data': 'y2', 'best_fits_data': 'y11', 'N': 'y11', 'maximal_deviation_value': 0.49678800000000045, 'maximal_deviation_index': 65}, {'train_data': 'y3', 'best_fits_data': 'y2', 'N': 'y2', 'maximal_deviation_value': 0.49987616, 'maximal_deviation_index': 345}, {'train_data': 'y4', 'best_fits_data': 'y33', 'N': 'y33', 'maximal_deviation_value': 0.4949089999999998, 'maximal_deviation_index': 345}]
+2023-07-18 18:36:11,753 - calculation - INFO - Calculation of M < (sqrt(2)) * N
+2023-07-18 18:36:11,753 - calculation - INFO - #########################################
+2023-07-18 18:36:11,753 - calculation - INFO - max M deviation: 119.347134
+2023-07-18 18:36:11,753 - calculation - INFO - max N deviation: 0.4997939999999943
+2023-07-18 18:36:11,753 - calculation - INFO - max M deviation: 13.0705814
+2023-07-18 18:36:11,753 - calculation - INFO - max N deviation: 0.49678800000000045
+2023-07-18 18:36:11,753 - calculation - INFO - max M deviation: 19.75521607
+2023-07-18 18:36:11,753 - calculation - INFO - max N deviation: 0.49987616
+2023-07-18 18:36:11,753 - calculation - INFO - max M deviation: 39.471744
+2023-07-18 18:36:11,753 - calculation - INFO - max N deviation: 0.4949089999999998
+2023-07-18 18:36:11,753 - main - INFO - validation_result: []
+2023-07-18 18:36:11,753 - main - INFO - ### Finished script ###
