@@ -35,6 +35,10 @@ class Calculation:
         """
         result_dict_list = []
 
+        # check whether the dataframe are empty
+        if train_data.empty | ideal_data.empty:
+            return result_dict_list
+
         # get number of rows in train_data
         rows_train_data = len(train_data.index)
         logger.info("rows = " + str(rows_train_data))
@@ -100,6 +104,10 @@ class Calculation:
                         result_dict_list (list): a list of dictionaries with results of calculation
         """
         result_dict_list = []
+
+        # check whether the dataframe are empty
+        if best_fits_data.empty | test_data.empty:
+            return result_dict_list
 
         logger.info("Get column values from best_fits_data and corresponding test_data")
         logger.info("#########################################")
@@ -168,6 +176,11 @@ class Calculation:
                         result_dict_list (list): a list of dictionaries with results of calculation
         """
         result_dict_list = []
+
+        # check whether the dataframe are empty
+        if train_data.empty | best_fits_data.empty:
+            return result_dict_list
+
         columns_train_data = len(train_data.columns)
         rows_train_data = len(train_data.index)
 
@@ -234,9 +247,9 @@ class Calculation:
             n_max_deviation = result_n_list[item].get("maximal_deviation_value")
             logger.info("max N deviation: " + str(n_max_deviation))
             n_condition = n_max_deviation * math.sqrt(2)
-            print("sqrt(2)*N = " + str(n_condition))
+            logger.info("sqrt(2)*N = " + str(n_condition))
 
             if m_max_deviation < n_condition:
-                print("M: " + str(m_max_deviation) + " is smaller than sqrt(2)*N: " + str(n_condition))
+                logger.info("M: " + str(m_max_deviation) + " is smaller than sqrt(2)*N: " + str(n_condition))
 
         return result_dict_list

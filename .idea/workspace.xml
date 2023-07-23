@@ -8,17 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e74143b-5d32-4043-9b9f-fbe4be0ad171" name="Changes" comment="added main hello world to main.py">
-      <change afterPath="$PROJECT_DIR$/Logging/2023-07-19.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logging/2023-07-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HausarbeitPython.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HausarbeitPython.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logging/2023-07-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logging/2023-07-23.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logging/2023-07-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logging/2023-07-18.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unittest/calculation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Unittest/calculation_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/centrallogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/centrallogger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualization.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +98,59 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for calculation_test.UnitTestCalculation.test_least_square_calculation_with_one_argument" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="HausarbeitPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unittest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;calculation_test.UnitTestCalculation.test_least_square_calculation_with_one_argument&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for calculation_test.UnitTestCalculation.test_max_deviation_best_fits_to_test_data_calculation_with_arguments" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="HausarbeitPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unittest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;calculation_test.UnitTestCalculation.test_max_deviation_best_fits_to_test_data_calculation_with_arguments&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for calculation_test.UnitTestCalculation.test_max_deviation_train_data_to_best_fits_calculation_with_one_argument" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="HausarbeitPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unittest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;calculation_test.UnitTestCalculation.test_max_deviation_train_data_to_best_fits_calculation_with_one_argument&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for calculation_test.UnitTestCalculation.test_max_deviation_train_data_to_best_fits_calculation_with_one_argument" />
+        <item itemvalue="Python tests.pytest for calculation_test.UnitTestCalculation.test_max_deviation_best_fits_to_test_data_calculation_with_arguments" />
+        <item itemvalue="Python tests.pytest for calculation_test.UnitTestCalculation.test_least_square_calculation_with_one_argument" />
         <item itemvalue="Python tests.Python tests for calculation_test.UnitTestCalculation" />
       </list>
     </recent_temporary>
