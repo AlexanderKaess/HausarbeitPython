@@ -1,6 +1,5 @@
 import unittest
 import pandas as pd
-import pytest
 from calculation import Calculation
 
 

@@ -25,6 +25,7 @@ class Database:
         self.database_name = None
         self.connection_string = ""
         self.meta_data = None
+        self.engine = None
 
     def create_connection(self, database_name):
         """
@@ -42,9 +43,13 @@ class Database:
         self.engine = db.create_engine(self.connection_string)
         logger.info("Engine object created")
 
-        # create databank connection object
-        connection = self.engine.connect()
-        logger.info("Databank connection object created")
+        try:
+            # create databank connection object
+            connection = self.engine.connect()
+            logger.info("Databank connection object created")
+        except Exception as error:
+            logger.error("Databank connection not created, error occured")
+            logger.error("Error:" + str(error))
 
         # create meta data object
         self.meta_data = db.MetaData()

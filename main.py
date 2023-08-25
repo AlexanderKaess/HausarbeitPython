@@ -1,6 +1,5 @@
 import logging
 import pandas as pd
-
 import centrallogger
 import visualization
 from database import Database
@@ -46,7 +45,7 @@ def main():
     # calculation of best fits from train data to ideal data
     calculation = Calculation()
     calculation_result = calculation.least_square_calculation(train_data, ideal_data)
-    logger.info("calcresult: " + str(calculation_result))
+    logger.info("calc result: " + str(calculation_result))
 
     # create table from calculation result
     logger.info("Create calculation result table")
