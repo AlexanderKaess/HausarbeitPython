@@ -85,9 +85,9 @@ class Database:
         result_data["x"] = np.round(np.linspace(-20, 20, 400, endpoint=False), decimals=1)
 
         # get the x value from result_data table, for testing only
-        for r in result_data.index:
-            value = result_data.loc[r, "x"]
-            logger.debug("x_value: " + str(value))
+        # for r in result_data.index:
+        #    value = result_data.loc[r, "x"]
+        #    logger.debug("x_value: " + str(value))
 
         # get the values from column ideal_data_y in best_fits_result
         best_ideal_functions = best_fits_result["ideal_data_y"].values
