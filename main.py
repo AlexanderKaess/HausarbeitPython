@@ -5,14 +5,11 @@ import visualization
 from database import Database
 from calculation import Calculation
 
-logger = logging.getLogger("HAUSARBEIT")
-
 
 def main():
-    logger.info("### Starting script for data comparison and validation ###")
-
     # create central logging object
-    centrallogger.Centrallogger("HAUSARBEIT")
+    logger = centrallogger.Centrallogger("HAUSARBEIT")
+    logger.info("### Starting script for data comparison and validation ###")
 
     # load .csv files to dataframes
     logger.info("Create training table")
