@@ -7,7 +7,7 @@ class UnitTestDatabase(unittest.TestCase):
     def setUp(self):
         self.database = Database()
 
-    @patch('os.environ', {'MY_SQL_PASSWORD': "Sinnlos1990!"})
+    @patch('os.environ', {'MY_SQL_PASSWORD': "PASSWORT"})
     def test_create_connection(self):
         self.database.create_connection('hausarbeit')
         self.assertEqual(self.database.database_name, 'hausarbeit')

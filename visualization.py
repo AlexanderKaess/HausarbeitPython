@@ -43,34 +43,38 @@ class Visualization:
         """
         try:
             df = self.source_dataframe
-            style.use("ggplot")
-
-            # resize graph
-            plt.figure(figsize=(15, 8))
-            # plot all the lines from source_dataframe
-            for y_index in df:
-                if y_index != "x":
-                    plt.plot(df.x, df[y_index], label=y_index)
-
-            plt.legend(loc=(1.01, 0.0))
-            plt.grid(True, color="k")
-            plt.title(df.name)
-            plt.ylabel("y-axis")
-            plt.xlabel("x-axis")
-            logger.info("Show plot: " + df.name)
-            plt.show()
         except:
             logger.info("get an exception at methode create_plot_from_dataframe")
+
+        style.use("ggplot")
+        # resize graph
+        plt.figure(figsize=(15, 8))
+        # plot all the lines from source_dataframe
+        for y_index in df:
+            if y_index != "x":
+                plt.plot(df.x, df[y_index], label=y_index)
+
+        plt.legend(loc=(1.01, 0.0))
+        plt.grid(True, color="k")
+        plt.title(df.name)
+        plt.ylabel("y-axis")
+        plt.xlabel("x-axis")
+        logger.info("Show plot: " + df.name)
+        plt.show()
 
     def create_plot_from_selection(self):
         """
         Create a plot from a dataframe with a selection from another dataframe
         """
         logger.info("Create plot from selection")
-        df_source = self.source_dataframe
-        df_selector = self.selector_dataframe
-        style.use("ggplot")
 
+        try:
+            df_source = self.source_dataframe
+            df_selector = self.selector_dataframe
+        except:
+            logger.info("get an exception at methode create_plot_from_dataframe")
+
+        style.use("ggplot")
         # resize graph
         plt.figure(figsize=(15, 8))
         # plot all the line from dataframes
